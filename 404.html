@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <style>
+
+    nav {
+      width: 100%;
+      height: 50px;
+      background-color: rgb(117, 117, 117);
+      color: rgb(57, 227, 232);
+      border-bottom: 10px solid rgb(57, 227, 232);
+    }
+
+    nav ul {
+      float: right;
+      list-style-type: none;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      width: 100%;
+      height: auto;
+      font-size: 5vh;
+      text-align: center;
+      margin-top: -2vw;
+    }
+
+    .planeGif {
+      margin: 0 auto;
+      margin-top: -31vw;
+      width: 35vw;
+      height: 35vw;
+      background: url('img/plan.gif');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+
+    h4 a {
+      /* text-decoration: none; */
+      color: #000;
+    }
+    h1 {
+      padding: 15vw 0 auto 0;
+    }
+
+    li a {
+      margin-right: 5vw;
+      color: rgb(57, 227, 232);
+      font-size: 1.6vw;
+    }
+
+    .page {
+      margin-top: 10vw;
+    }
+
+    .foot {
+      width: 100%;
+      height: 80px;
+      background-color: rgb(117, 117, 117);
+      color: rgb(57, 227, 232);
+      border-top: 10px solid rgb(57, 227, 232);
+      position: fixed;
+      bottom: 0;
+    }
+
+  </style>
+
+  <title>404 page</title>
+
+</head>
+<body>
+  <header>
+    <div class="containerMenu">
+      <div class="menu">
+        <div id="menuToggle">
+          <nav role="navigation">
+            <label for="menu-checkbox" class="toogle-button"></label>
+            <ul class="main-menu">
+              <li onclick="newWindow = window.open('index1.html')"><a href="#" class="activeCSS">Главная</a></li>
+              <li onclick="newWindow = window.open('index2.html')"><a href="#">Авиакомпании</a></li>
+              <li onclick="newWindow = window.open('index3.html')"><a href="#">Направления</a></li>
+              <li onclick="newWindow = window.open('index4.html')"><a href="#">Пассажирам</a></li>
+              <!-- <li onclick="newWindow = window.open('index5.html')"><a href="#">Путешествия</a></li> -->
+              <li onclick="newWindow = window.open('index6.html')"><a href="#">Отзывы</a></li>
+            </ul>
+          </nav>
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </div>
+      </div>
+    </div>
+
+  <main>
+    <div class="page">
+      <h1>404</h1>
+      <h3>SORRY BUT THE PAGE HAS NOT BEEN FOUND</h3>
+      <h4><a href="index1.html">Вернитесь на предыдущую страницу</a></h4>
+    </div>
+    <div class="planeGif"></div>
+  </main>
+  <footer>
+    <div class="foot">
+
+    </div>
+  </footer>
+</body>
+</html>

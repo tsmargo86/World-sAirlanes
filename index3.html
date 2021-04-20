@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="animate.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <style media="screen">
+
+  .activeCSS {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    font-size: 17px;
+    padding: 5px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.3px black;
+    border-bottom: 3px solid rgb(0,255,255);
+    color: rgb(186, 214, 206);
+  }
+
+  @media screen and (min-width:576px) and (max-width:900px) {
+    .activeCSS {
+      border: none;
+      border-bottom: none;
+      color: rgb(0,255,255);
+     box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    .activeCSS {
+      border: none;
+      border-bottom: none;
+      color: rgb(0,255,255);
+     box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+
+  </style>
+
+  <title>Авиакомпании Мира</title>
+</head>
+<body>
+  <header>
+    <div class="containerMenu">
+      <div class="logo1" onclick="newWindow = window.open('index1.html')">
+        <div class="logo-img">
+          <img src="img/logo.png" alt="logo">
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-contact">
+          <button type="button" name="entrance" id="entrance" data-toggle="modal" data-target="#modal-1">ВОЙТИ</button>
+          <button type="button" name="checkIn" id="checkIn" data-toggle="modal2" data-target="#modal-2">РЕГИСТРАЦИЯ</button>
+        </div>
+        <div id="menuToggle">
+          <input id="menu-checkbox" type="checkbox">
+          <nav role="navigation" class="nav">
+            <label for="menu-checkbox" class="toogle-button"></label>
+            <ul class="main-menu">
+              <li onclick="newWindow = window.open('index6.html')"><a href="#">Отзывы</a></li>
+              <!-- <li onclick="newWindow = window.open('index5.html')"><a href="#">Путешествия</a></li> -->
+              <li onclick="newWindow = window.open('index4.html')"><a href="#">Пассажирам</a></li>
+              <li onclick="newWindow = window.open('index3.html')"><a href="#" class="activeCSS">Направления</a></li>
+              <li onclick="newWindow = window.open('index2.html')"><a href="#">Авиакомпании</a></li>
+              <li onclick="newWindow = window.open('index.html')"><a href="#">Главная</a></li>
+            </ul>
+          </nav>
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fullscreen-bg">
+      <div class="overlay">
+        <h1>Авиакомпании <br>Мира</h1>
+        <br>
+        <br>
+        <h2>Путешевствуем вместе</h2>
+      </div>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video showing">
+        <source src='video/travel video.mov' type='video/mp4'>
+      </video>
+    </div>
+    <div class="decorHeader">
+      <img src="img/pngkit_wave-png_97160.png" alt="" id="imgDecor1">
+      <img src="img/kisspng-light-designer.png" alt="" id="imgDecor2">
+    </div>
+  </header>
+
+  <main>
+    <div class="mainContainer">
+      <div class="infoForUser">
+        <h1>Направления</h1>
+        <p  class="sec-textContainer" align="justify">В данном разделе нашего
+          сайта вы можете взять себе на заметку информацию о погодных и летных
+          условиях в тех городах и странах, на которых вы остановили свой выбор в
+          процессе поиска лучшего места для отдыха на Земле.</p>
+      </div>
+
+      <div class="aboutViza">
+        <div class="aboutMap">
+          <h2>Полетная карта</h2>
+          <p class="sec-textContainer" align="justify">Мы предоставляем вашему
+            вниманию глобальную службу Отслеживания полетов, которая в режиме
+            реального времени предоставляет вам информацию о тысячах самолетов
+            по всему миру. Она позволяет отследить окло 180000+ рейсов от 1200+
+            авиакомпаний совершивших вылет из 4000+ аэропортов по всему миру.
+            И если вы беспокоитесь о задержках своего рейса, находясь в аэропорту,
+            вы можете посетить наш сайт с мобильных устройств и лично удостовериться
+            в плане полета своего рейса.
+          </p>
+        </div>
+        <div class="flyMap">
+          <iframe src = "http://www.flightradar24.com/simple_index.php?lat=49.8&lon=12.3&z=8" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
+      <div class="decorBlock2">
+        <img src="img/pngkit_wave-png_97160.png" alt="decor" id="imgDecor1">
+        <img src="img/kisspng-light-designer.png" alt="decor" id="imgDecor2">
+      </div>
+
+      <div class="weather">
+        <div class="aboutWeather">
+          <h2>Погодные условия</h2>
+          <p class="sec-textContainer" align="justify">Чтобы ваше путешевствие
+            оставалось комфортным и неволнительным вы можете с помощью нашего
+            сайта лично убедиться в погодных условиях по выбранному вами
+            направлению.</p>
+        </div>
+
+        <div class="tourist">
+
+          <div id="block">
+
+            <div id="search">
+              <div id="nameBlock"><b>CURRENT WEATHER</b></div>
+              <div id="choise">
+                <input type="text" name="cityName" value="" id="cityName" placeholder="Search">
+                <div id="clickButton" onclick="startSearch()" class="searchButton">
+                  <img src="img/magnifying-glass.png" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div id="weatherCity">
+              <div id="infoWeatherCity">
+                <div id="city"></div>
+                <div id="dataToday"></div>
+              </div>
+              <div id="infoToday">
+                <div id="weather">
+                  <span id="descriptionText"></span>
+                  <div id="descriptionImg"></div>
+                </div>
+                <div id="temperatureToday"></div>
+                <div id="aboutTemperature">
+                  <div id="minTemperature">Min Температура
+                    <span id="minTemp"></span> </div>
+                  <div id="maxTemperature">Max Температура
+                    <span id="maxTemp"></span> </div>
+                  <div id="windSpeed">Скорость ветра &#40;km&#47;h&#41;
+                    <span id="infoWind"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="weatherHourly">
+              <div id="hourly">Почасовая погода</div>
+              <div id="infoWeatherHourly">
+                <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" id="col1" align="center"></th>
+                    <th scope="col" id="col2" align="center"></th>
+                    <th scope="col" id="col3" align="center"></th>
+                    <th scope="col" id="col4" align="center"></th>
+                    <th scope="col" id="col5" align="center"></th>
+                    <th scope="col" id="col6" align="center"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" id="row1"></th>
+                    <td id="img1" align="center"></td>
+                    <td id="img2" align="center"></td>
+                    <td id="img3" align="center"></td>
+                    <td id="img4" align="center"></td>
+                    <td id="img5" align="center"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" id="row2">Погода</th>
+                    <td id="info1" align="center"></td>
+                    <td id="info2" align="center"></td>
+                    <td id="info3" align="center"></td>
+                    <td id="info4" align="center"></td>
+                    <td id="info5" align="center"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" id="row3">Темп &#40;C&#41;</th>
+                    <td id="temp1" align="center"></td>
+                    <td id="temp2" align="center"></td>
+                    <td id="temp3" align="center"></td>
+                    <td id="temp4" align="center"></td>
+                    <td id="temp5" align="center"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" id="row4">Ветер &#40;km&#47;h&#41;</th>
+                    <td id="wind1" align="center"></td>
+                    <td id="wind2" align="center"></td>
+                    <td id="wind3" align="center"></td>
+                    <td id="wind4" align="center"></td>
+                    <td id="wind5" align="center"></td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="decorBlock3">
+        <img src="img/pngkit_wave-png_97160.png" alt="decor" id="imgDecor1">
+        <img src="img/kisspng-light-designer.png" alt="decor" id="imgDecor2">
+      </div>
+
+      <div class="aboutCoordinates">
+        <div class="tourist">
+          <ul class="folded">
+            <li class="folded-itm"></li>
+            <li class="folded-itm"></li>
+            <li class="folded-itm"></li>
+            <li class="folded-itm"></li>
+          </ul>
+        </div>
+        <div class="infoCoordinates">
+          <p class="sec-textContainer" align="justify">Миллионы стран по всему
+          миру могут стать вашим выбором при поиске мест отдыха, бизнес встреч
+          работы или стать постоянным местом жительства. Мы будем рады вам
+          помочь, когда вы каснетесь вопроса перелета. Оставайтесь с нами на
+          связи и мы сможем вам помочь из любой точки мира.</p>
+        </div>
+      </div>
+
+      <div class="decorBlock2">
+        <img src="img/pngkit_wave-png_97160.png" alt="decor" id="imgDecor1">
+        <img src="img/kisspng-light-designer.png" alt="decor" id="imgDecor2">
+      </div>
+
+      <div class="blockEnd2">
+        <div class="blockEndInfo2">
+          <p class="sec-textContainer" align="justify">Если у вас есть пожелания
+            оставить отзывы по работе данного приложения вы также можете
+            воспользоваться разделом отзывы, перейдя по ссылке ниже.
+          </p>
+          <p align="right" class="review">
+            <a href="index6.html">Оставить отзывы</a>
+          </p>
+
+          <!-- модальное окно -->
+
+          <div id="modal-1" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">АВИАКОМПАНИИ МИРА</h3>
+                  <a href="#" type="reset" value="reset" onclick="window.location.reload()" class="close" title="закрыть">×</a>
+                </div>
+                <div class="modal-body">
+
+                  <form method="GET" id="regForm" onsubmit="checkForm()">
+                    <input type="text" id="userName" name="userName"
+                    placeholder="Имя" required pattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                    <div id="contact">
+                      <input type="phone" id="userPhone" name="userPhone"
+                      placeholder="Моб.телефон" required pattern="[+\d]{10,}$">
+                      <input type="email" name="mail" id="mail" placeholder="Почта">
+                    </div>
+                    <textarea name="name" rows="5" cols="35"
+                      placeholder="Ваш вопрос или комментарий" id='userText'>
+                    </textarea>
+                    <span>Вход в личный кабинет:</span>
+                    <b>Логин:</b> <input type="text" id="userLogin" name="login"
+                    oninput="validateComments(this)" requiredpattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                    <b>Пароль:</b> <input type="password" id="userPas1" name="pass">
+                    <p id="colorInfo">Оранжевым отмечены поля для обязательного заполнения</p>
+                    <input id="button" type="submit" value="Вход в приложение"/>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal-2" class="modal2">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">АВИАКОМПАНИИ МИРА</h3>
+                  <a href="#" class="close" title="закрыть">×</a>
+                </div>
+                <div class="modal-body">
+
+                  <form method="GET" id="regForm" onsubmit="checkForm()">
+                    <div id="contact">
+                      <input type="phone" id="userPhone" name="userPhone"
+                      placeholder="Моб.телефон" required pattern="[+\d]{10,}$">
+                      <div>или</div>
+                      <input type="email" name="mail" id="mail" placeholder="Почта">
+                    </div>
+                    <input type="text" id="userName" name="userName"
+                    placeholder="Ф.И.О. пользователя" required pattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                    <b>Пароль:</b> <input type="password" id="userPas1" name="pass">
+                    <p id="colorInfo">Оранжевым отмечены поля для обязательного заполнения</p>
+                    <input id="button" type="submit" value="Регистрация"/>
+                    <b>Вы уже зарегистрированы? <a href="#" class="entry" data-toggle="modal" data-target="#modal-1">Вход</a></b>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+  <footer>
+    <div class="footerContainer">
+      <div class="decorFooter">
+        <img src="img/pngkit_wave-png_97160.png" alt="" id="imgDecor1">
+        <img src="img/klipartz.png" alt="" id="imgDecor2">
+      </div>
+      <div class="info">
+        <div class="points">
+          <div class="logo1">
+            <img src="img/logo.png" alt="logo" width="60%" class="wow zoomInLeft"
+            data-wow-offset="100"
+            data-wow-delay="0.5s"
+            data-wow-duration="2s">
+          </div>
+          <div class="pointsName">
+            <div class="point"><a href="index6.html">Отзывы об авиакомпаниях</a></div>
+            <div class="point" data-toggle="modal2" data-target="#modal-2">Регистрация</div>
+
+            <div class="point">Звони по номеру:</div>
+            <div class="pointNumber">&plus;38 044 339&minus;&#42;&#42;&minus;&#42;&#42;</div>
+            <div class="pointNumber">&plus;38 044 339&minus;&#42;&#42;&minus;&#42;&#42;</div>
+          </div>
+        </div>
+
+        <div class="network">
+          <div class="network-icon">
+            <div class="network-text">
+              Мы в социальных сетях
+            </div>
+            <ul class="socialIcons">
+              <li onclick="newWindow = window.open('https://www.facebook.com/')"><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li onclick="newWindow = window.open('https://twitter.com/login?lang=ru')"><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li onclick="newWindow = window.open('https://www.instagram.com/')"><a class="instagram" href=""><i class="fa fa-instagram"></i></a></li>
+              <li onclick="newWindow = window.open('https://www.youtube.com/')"><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="awards">
+
+        <div class="logo2">
+          <div id="aboutAirlaines1" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-top-10-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/Skytrax-AOTY.png" alt="Skytrax logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-top-10-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Авиакомпании Года
+          </div>
+        </div>
+
+        <div class="logo2">
+          <div id="aboutAirlaines2" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-best-business-class-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/Skytrax-Winner.png" alt="Skytrax logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-best-business-class-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Лучший бизнес-класс в мире
+          </div>
+        </div>
+
+        <div class="logo2">
+          <div id="aboutAirlaines3" onclick="newWindow = window.open('https://www.tripadvisor.ru/TravelersChoice-Airlines', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/traveller-choice-award.png" alt="tripadvisor logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.tripadvisor.ru/TravelersChoice-Airlines', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Лучший бизнес-класс и еще 5 наград
+          </div>
+        </div>
+        <div class="arrow">
+          <a href="#top" class="up"> <img src="img/up.png" alt="up"> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+
+  <script type="text/javascript">
+
+  $(function() {
+
+    // <!-- Изменение шапки страницы при скроле -->
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll >= 150) {
+        $('.containerMenu').css('background', 'rgb(0, 0, 0, 0.45)');
+        $('.containerMenu').css('borderBottom', 'rgb(16, 199, 166, 0.4) solid 2px');
+        $('.main-menu').css('background', 'rgb(0, 0, 0, 0.45)');
+      } else {
+        $('.containerMenu').css('background', 'none');
+        $('.containerMenu').css('borderBottom', 'none');
+        $('.main-menu').css('background', 'none');
+      }
+    });
+
+    // Эффект при нажатии кнопки вверх
+    $(".arrow").mousedown(function () {
+      $(".arrow").effect( "bounce", "slow" );
+      $(".arrow").css('transition', 'none');
+    });
+
+    $(".arrow").mouseup(function () {
+      setTimeout(function() {
+        $(".arrow").css('transition', '0.5s');
+      }, 1500);
+    });
+
+    // <!-- эффекты кнопки -->
+    $(window).ready(function(){
+      $(".boton").wrapInner('<div class=botontext></div>');
+      $(".botontext").clone().appendTo( $(".boton") );
+      $(".boton").append('<span class="twist"></span><span class="twist"></span><span class="twist"></span><span class="twist"></span>');
+      $(".twist").css("width", "25%").css("width", "+=3px");
+    });
+
+    // Работа модального окна
+
+    $(document).on('click', '[data-toggle="modal"]', function () {
+      var target = $(this).attr('data-target');
+      $(target).addClass('show');
+      return false;
+    });
+    $('.modal .close').on('click', function () {
+      $(this).closest('.modal').removeClass('show');
+      return false;
+    });
+
+
+    $(document).on('click', '[data-toggle="modal2"]', function () {
+      var target = $(this).attr('data-target');
+      $(target).addClass('show');
+      return false;
+    });
+    $('.modal2 .close').on('click', function () {
+      $(this).closest('.modal2').removeClass('show');
+      return false;
+    });
+
+    $('.entry').on('click', function () {
+      $(this).closest('.modal2').removeClass('show');
+      $(document).on('click', '[data-toggle="modal"]', function () {
+        var target = $(this).attr('data-target');
+        $(target).addClass('show');
+        return false;
+      });
+    });
+  });
+
+  // условие для погоды на сегодня
+
+  let request_1;
+  if(window.XMLHttpRequest){
+    request_1 = new XMLHttpRequest();
+  }
+  else{
+    request_1 = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  // условие для погоды по часам
+
+  let request_2;
+  if(window.XMLHttpRequest){
+    request_2 = new XMLHttpRequest();
+  } else{
+    request_2 = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  var input = document.getElementById("cityName");
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("clickButton").click();
+  }
+});
+
+  function startSearch() {
+
+    // вывод дня недели
+
+    function getWeekDay(date) {
+      let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      return days[date.getDay()];
+    }
+    let date = new Date();
+    console.log(getWeekDay(date));
+
+    result = choise.querySelector('input').value;
+
+    city.innerText = result;
+    today = new Date().toLocaleDateString();
+    dataToday.innerText = today;
+
+    let variable = "https://api.openweathermap.org/data/2.5/weather?q=";
+    let url = variable + result + "&appid=90a1ff0856e57854a42e4b18b68e627c";
+    console.log(url);
+    request_1.open("GET", url);
+    request_1.onload = function() {
+      if (request_1.status === 200) {
+        console.log(request_1.response);
+        allResponse = JSON.parse(request_1.response);
+
+        // вывод информации о погоде на сегодня (температура, максимальная и минимальна температура, скорость ветра)
+
+        document.getElementById('descriptionText').innerText = allResponse.weather[0].main;
+        let valueOfTemperature = Math.floor(allResponse.main.temp - Number(273.15));
+        document.getElementById('temperatureToday').innerHTML = valueOfTemperature + '&#176;C';
+        let valueOfTemperatureMin = Math.floor(allResponse.main.temp_min - Number(273.15));
+        document.getElementById('minTemp').innerHTML = ': ' + valueOfTemperatureMin + '&#176;C';
+        let valueOfTemperatureMax = Math.floor(allResponse.main.temp_max - Number(273.15));
+        document.getElementById('maxTemp').innerHTML = ': ' + valueOfTemperatureMax + '&#176;C';
+        let valueOfWindSpeed = Math.floor(allResponse.wind.speed);
+        document.getElementById('infoWind').innerHTML = ': ' + valueOfWindSpeed;
+
+        // вывод информации о погоде на сегодня в виде картинки с сайта(с разными условиями)
+
+        if (allResponse.weather[0].main == 'Clouds' || allResponse.weather[0].main == 'Haze') {
+          descriptionImg.innerHTML = '<img src="http://openweathermap.org/img/wn/03d@2x.png" alt="clouds" width="90%">';
+        } else if (allResponse.weather[0].main == 'Clear') {
+          descriptionImg.innerHTML = '<img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sunny" width="90%">';
+        } else if (allResponse.weather[0].main == 'Rain') {
+          descriptionImg.innerHTML = '<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="raining" width="90%">';
+        } else if (allResponse.weather[0].main == 'Snow') {
+          descriptionImg.innerHTML = '<img src="http://openweathermap.org/img/wn/13d@2x.png" alt="snow" width="90%">';
+        }
+
+        // заходим на сайт из которого будут тянуться данные о погоде по часово
+
+        let variable_3 = Number(allResponse.coord.lat);
+        console.log(variable_3);
+        let variable_5 = Number(allResponse.coord.lon);
+        console.log(variable_5);
+        let variable_2 = "https://api.openweathermap.org/data/2.5/onecall?lat=";
+        let variable_4 = "&lon=";
+        let variable_6 = "&dt=";
+        data_1 = new Date();
+        data_2 = data_1.getMilliseconds();
+        console.log(data_2);
+        let url_2 = variable_2 + variable_3 + variable_4 + variable_5 + variable_6 + data_2 + "&exclude=hourly&appid=90a1ff0856e57854a42e4b18b68e627c&lang=ru";
+        console.log(url_2);
+
+        // погода по часам
+
+        request_2.open("GET", url_2);
+        request_2.onload = function() {
+          if (request_2.status === 200) {
+            console.log(request_2.response);
+            allResponse = JSON.parse(request_2.response);
+            // вывод дня недели
+            document.getElementById('col1').innerText = getWeekDay(date);
+
+            // вывод часов на экран
+
+            var maxDate_1 = allResponse.hourly[0].dt;
+            maxDate_1 = new Date(maxDate_1 + 32400000);
+            maxDateFinal_1 = maxDate_1.toLocaleTimeString();
+            document.getElementById('col2').innerHTML = maxDateFinal_1;
+
+            var maxDate_2 = allResponse.hourly[1].dt;
+            maxDate_2 = new Date(maxDate_2 + 39600000);
+            maxDateFinal_2 = maxDate_2.toLocaleTimeString();
+            document.getElementById('col3').innerHTML = maxDateFinal_2;
+
+            var maxDate_3 = allResponse.hourly[2].dt;
+            maxDate_3 = new Date(maxDate_3 + 46800000);
+            maxDateFinal_3 = maxDate_3.toLocaleTimeString();
+            document.getElementById('col4').innerHTML = maxDateFinal_3;
+
+            var maxDate_4 = allResponse.hourly[3].dt;
+            maxDate_4 = new Date(maxDate_4 + 54000000);
+            maxDateFinal_4 = maxDate_4.toLocaleTimeString();
+            document.getElementById('col5').innerHTML = maxDateFinal_4;
+
+            var maxDate_5 = allResponse.hourly[4].dt;
+            maxDate_5 = new Date(maxDate_5 + 61200000);
+            maxDateFinal_5 = maxDate_5.toLocaleTimeString();
+            document.getElementById('col6').innerHTML = maxDateFinal_5;
+
+            // информация о погоде по часам
+
+            document.getElementById('info1').innerText = allResponse.hourly[0].weather[0].main;
+            document.getElementById('info2').innerText = allResponse.hourly[1].weather[0].main;
+            document.getElementById('info3').innerText = allResponse.hourly[2].weather[0].main;
+            document.getElementById('info4').innerText = allResponse.hourly[3].weather[0].main;
+            document.getElementById('info5').innerText = allResponse.hourly[4].weather[0].main;
+
+            // вывод картинок о погоде по часам
+
+            if (allResponse.hourly[0].weather[0].main == 'Clouds' || allResponse.hourly[0].weather[0].main == 'Haze') {
+              img1.innerHTML = '<img src="http://openweathermap.org/img/wn/03d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[0].weather[0].main == 'Clear') {
+              img1.innerHTML = '<img src="http://openweathermap.org/img/wn/01d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[0].weather[0].main == 'Rain') {
+              img1.innerHTML = '<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[0].weather[0].main == 'Snow') {
+              img1.innerHTML = '<img src="http://openweathermap.org/img/wn/13d@2x.png" alt="clouds" width="90%">';
+            }
+
+            if (allResponse.hourly[1].weather[0].main == 'Clouds' || allResponse.hourly[1].weather[0].main == 'Haze') {
+              img2.innerHTML = '<img src="http://openweathermap.org/img/wn/03d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[1].weather[0].main == 'Clear') {
+              img2.innerHTML = '<img src="http://openweathermap.org/img/wn/01d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[1].weather[0].main == 'Rain') {
+              img2.innerHTML = '<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[1].weather[0].main == 'Snow') {
+              img2.innerHTML = '<img src="http://openweathermap.org/img/wn/13d@2x.png" alt="clouds" width="90%">';
+            }
+
+            if (allResponse.hourly[2].weather[0].main == 'Clouds' || allResponse.hourly[2].weather[0].main == 'Haze') {
+              img3.innerHTML = '<img src="http://openweathermap.org/img/wn/03d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[2].weather[0].main == 'Clear') {
+              img3.innerHTML = '<img src="http://openweathermap.org/img/wn/01d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[2].weather[0].main == 'Rain') {
+              img3.innerHTML = '<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[2].weather[0].main == 'Snow') {
+              img3.innerHTML = '<img src="http://openweathermap.org/img/wn/13d@2x.png" alt="clouds" width="90%">';
+            }
+
+            if (allResponse.hourly[3].weather[0].main == 'Clouds' || allResponse.hourly[3].weather[0].main == 'Haze') {
+              img4.innerHTML = '<img src="http://openweathermap.org/img/wn/03d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[3].weather[0].main == 'Clear') {
+              img4.innerHTML = '<img src="http://openweathermap.org/img/wn/01d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[3].weather[0].main == 'Rain') {
+              img4.innerHTML = '<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[3].weather[0].main == 'Snow') {
+              img4.innerHTML = '<img src="http://openweathermap.org/img/wn/13d@2x.png" alt="clouds" width="90%">';
+            }
+
+            if (allResponse.hourly[4].weather[0].main == 'Clouds' || allResponse.hourly[4].weather[0].main == 'Haze') {
+              img5.innerHTML = '<img src="http://openweathermap.org/img/wn/03d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[4].weather[0].main == 'Clear') {
+              img5.innerHTML = '<img src="http://openweathermap.org/img/wn/01d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[4].weather[0].main == 'Rain') {
+              img5.innerHTML = '<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clouds" width="90%">';
+            } else if (allResponse.hourly[4].weather[0].main == 'Snow') {
+              img5.innerHTML = '<img src="http://openweathermap.org/img/wn/13d@2x.png" alt="clouds" width="90%">';
+            }
+
+            // вывод температуры на экран по часам
+
+            let valueOfTemp1 = Math.floor(allResponse.daily[0].temp.day - Number(273.15));
+            document.getElementById('temp1').innerHTML = valueOfTemp1 + '&#176;C';
+            let valueOfTemp2 = Math.floor(allResponse.daily[1].temp.day - Number(273.15));
+            document.getElementById('temp2').innerHTML = valueOfTemp2 + '&#176;C';
+            let valueOfTemp3 = Math.floor(allResponse.daily[2].temp.day - Number(273.15));
+            document.getElementById('temp3').innerHTML = valueOfTemp3 + '&#176;C';
+            let valueOfTemp4 = Math.floor(allResponse.daily[3].temp.day - Number(273.15));
+            document.getElementById('temp4').innerHTML= valueOfTemp4 + '&#176;C';
+            let valueOfTemp5 = Math.floor(allResponse.daily[4].temp.day - Number(273.15));
+            document.getElementById('temp5').innerHTML = valueOfTemp5 + '&#176;C';
+
+            // вывод скорости ветра по часам
+
+            document.getElementById('wind1').innerText = Math.floor(allResponse.hourly[0].wind_speed);
+            document.getElementById('wind2').innerText = Math.floor(allResponse.hourly[1].wind_speed);
+            document.getElementById('wind3').innerText = Math.floor(allResponse.hourly[2].wind_speed);
+            document.getElementById('wind4').innerText = Math.floor(allResponse.hourly[3].wind_speed);
+            document.getElementById('wind5').innerText = Math.floor(allResponse.hourly[4].wind_speed);
+          } else {
+            weatherCity.style.display = 'none';
+            weatherHourly.style.display = 'none';
+            error_404.style.display = 'block';
+          }
+        }
+        request_2.send();
+      } else {
+        weatherCity.style.display = 'none';
+        weatherHourly.style.display = 'none';
+        error_404.style.display = 'block';
+      }
+    }
+    request_1.send();
+  }
+
+  // проверка форм
+
+  // проверка на ввод в поле с именем только букв
+  function validateComments(userName) {
+    var phoneChoice = document.getElementById('userName').value;
+    var temlateName = /^[А-Яа-яЁё\s]/i;
+       if (!temlateName.test(nameChoice)) {
+        userName.setCustomValidity("Дайте более развернутый ответ.");
+       }
+       else {
+        userName.setCustomValidity("");
+       }
+  }
+
+  // проверка на ввод в поле почты.
+  var email = document.getElementById('mail');
+  email.addEventListener("input", function(event) {
+    if(email.validity.typeMismatch) {
+      // в случае не соответствия условия - выводится сообщение
+      email.setCustomValidity("Не похоже на почту");
+    } else {
+      email.setCustomValidity("");
+    }
+  })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="animate.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <style media="screen">
+
+  .activeCSS {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    font-size: 17px;
+    padding: 5px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.3px black;
+    border-bottom: 3px solid rgb(0,255,255);
+    color: rgb(186, 214, 206);
+  }
+
+  @media screen and (min-width:576px) and (max-width:900px) {
+    .activeCSS {
+      border: none;
+      border-bottom: none;
+      color: rgb(0,255,255);
+     box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    .activeCSS {
+      border: none;
+      border-bottom: none;
+      color: rgb(0,255,255);
+     box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+
+  </style>
+
+  <title>Авиакомпании Мира</title>
+</head>
+<body>
+  <header>
+    <div class="containerMenu">
+      <div class="logo1" onclick="newWindow = window.open('index.html')">
+        <div class="logo-img">
+          <img src="img/logo.png" alt="logo">
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-contact">
+          <button type="button" name="entrance" id="entrance" data-toggle="modal" data-target="#modal-1">ВОЙТИ</button>
+          <button type="button" name="checkIn" id="checkIn" data-toggle="modal2" data-target="#modal-2">РЕГИСТРАЦИЯ</button>
+        </div>
+        <div id="menuToggle">
+          <input id="menu-checkbox" type="checkbox">
+          <nav role="navigation">
+            <label for="menu-checkbox" class="toogle-button"></label>
+            <ul class="main-menu">
+              <li onclick="newWindow = window.open('index6.html')"><a href="#">Отзывы</a></li>
+              <!-- <li onclick="newWindow = window.open('index5.html')"><a href="#">Путешествия</a></li> -->
+              <li onclick="newWindow = window.open('index4.html')"><a href="#" class="activeCSS">Пассажирам</a></li>
+              <li onclick="newWindow = window.open('index3.html')"><a href="#">Направления</a></li>
+              <li onclick="newWindow = window.open('index2.html')"><a href="#">Авиакомпании</a></li>
+              <li onclick="newWindow = window.open('index.html')"><a href="#">Главная</a></li>
+            </ul>
+          </nav>
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fullscreen-bg">
+      <div class="overlay">
+        <h1>Авиакомпании <br>Мира</h1>
+        <br>
+        <br>
+        <h2>Путешевствуем вместе</h2>
+      </div>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video showing">
+        <source src='video/Ben Gurion Airport.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Takes a Suitcase From a Luggage Carousel.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Ben Gurion Airport.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Suitcase From the Luggage Carousel.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Evening_landing.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Terminal Lounge.mp4' type='video/mp4'>
+      </video>
+
+
+    </div>
+    <div class="decorHeader">
+      <img src="img/pngkit_wave-png_97160.png" alt="" id="imgDecor1">
+      <img src="img/kisspng-light-designer.png" alt="" id="imgDecor2">
+    </div>
+  </header>
+
+  <main>
+    <div class="mainContainer">
+      <div class="infoForUser">
+        <h1>Подготовка</h1>
+        <p  class="sec-textContainer" align="justify">Мы хотим, чтобы ваше путешествие было приятным и
+          беспроблемным. Вы можете забронировать свой рейс как у нас, так и
+          напрямую на сайтах авиакомпаний, указанных на нашем сайте. И до того
+          момента, как вы вернетесь домой, мы хотим убедиться, что вы не пускаете
+          на волю случая детали своего путешествия и вернувшись домой вы поняли,
+          что у вас было идеальное путешествие.</p>
+      </div>
+
+      <div class="pasport">
+        <div class="tourist">
+          <img src="img/tourist.png" alt="tourist">
+        </div>
+        <div class="aboutDocumets">
+          <h2>Визовые и паспортные требования</h2>
+          <p class="sec-textContainer" align="justify">Вы остановились на пункте назначения своей мечты? Мы советуем вам
+            перед поездкой убедиться, что вы подготовили все необходимые документы
+            в соответствии с требованиями этой страны, а также при подготовке
+            выдержали все требованиям к паспортам и визам, для более комфортного
+            пребывания в аэропорту.</p>
+        </div>
+      </div>
+
+      <div class="decorBlock1">
+        <img src="img/pngkit_wave-png_97160.png" alt="decor" id="imgDecor1">
+        <img src="img/kisspng-light-designer.png" alt="decor" id="imgDecor2">
+      </div>
+
+      <div class="aboutViza">
+        <div class="aboutVizaText">
+          <h2>Подготовка документов</h2>
+          <p class="sec-textContainer" align="justify">Когда дело доходит до
+            требований к въезду и документации, в каждой стране есть свой набор
+            критериев, которые каждый из путешевственников должен учесть.</p>
+          <p class="sec-textContainer" align="justify">Чтобы избежать задержек,
+            мы рекомендуем вам проверить последние требования от выбранного вами
+            направлению, чтобы убедиться, что у вас есть все необходимые
+            проездные документы к вашему полету.</p>
+        </div>
+        <div class="tourist">
+          <img src="img/pasport.png" alt="pasport">
+          <a href="index9.html" class="boton" data-toggle="modal" data-target="#modal-1">Узнать больше</a>
+        </div>
+      </div>
+
+      <div class="decorBlock2">
+        <img src="img/pngkit_wave-png_97160.png" alt="decor" id="imgDecor1">
+        <img src="img/kisspng-light-designer.png" alt="decor" id="imgDecor2">
+      </div>
+
+      <div class="baggage">
+        <div class="aboutBaggage">
+          <h2>Информация о багаже</h2>
+        </div>
+        <div class="bag">
+          <img src="img/bag-on-belt.png" alt="bag" id="bag">
+        </div>
+      </div>
+
+      <div class="aboutBag">
+        <div class="tourist">
+          <img src="img/info-bag.png" alt="stewardess" id="stewardess" hidden>
+        </div>
+        <div class="infoBag">
+          <p class="sec-textContainer" align="justify">Начните свое безупречное
+            путешествие с того момента, когда откроете чемодан дома и начнете
+            свою подготовку к нему. Предусмотрите такое количество вещей, чтобы
+            в итоге его вес соответствовал норме его провоза согласно требований
+            выбранных вами авиалиний. Поэтому берите с собой только все самое
+            необходимое.</p>
+          <p class="sec-textContainer" align="justify">Нормы провоза багажа могут
+            различаться в зависимости от маршрута и класса салона. Ознакомьтся с
+            правилами провоза зарегистрированного багажа и ручной клади, узнать
+            больше о характеристиках веса и раз сможете если обратитесь к нам за
+            помощью в разделе данной страницы "Подготовка документов".</p>
+          <p class="sec-textContainer" align="justify">Особое внимание уделите
+            правилам провоза в другие страны такого инвентаря как: музыкальные
+            инструменты, спортивное снаряжение, спортивное оружие и боеприпасы,
+            инвалидные и детские коляски, оборудование для видеосъемки. Именно
+            эти вещи могут вызвать препядствия на пути к вашему безупречному
+            отпуску если не позаботиться о их перевозе заранее. И именно они,
+            если вы решите их оформлять в багаж могут вызвать дополнительные
+            расходы на его оплату из-за превышения нормы по весу.
+          </p>
+        </div>
+      </div>
+
+      <div class="decorBlock2">
+        <img src="img/pngkit_wave-png_97160.png" alt="decor" id="imgDecor1">
+        <img src="img/kisspng-light-designer.png" alt="decor" id="imgDecor2">
+      </div>
+
+      <div class="aboutHotels">
+        <div class="aboutHotelsText">
+          <div class="airplaneFly">
+            <img src="img/airplane-fly.png" alt="airplane-fly" id="flyIn">
+          </div>
+          <div class="text">
+            <h2>Длительные пересадки</h2>
+            <p class="sec-textContainer" align="justify">Если ваш полет будет
+            достаточно длительным и планируются такие же пересадки, уточните
+            возможность снятия на ночь отеля. Некоторые авиакомпании заботятся о
+            своих пассажирах и предоставляют эту услугу бесплатно.</p>
+          </div>
+
+        </div>
+        <div class="tourist">
+          <img src="img/the-airport.png" alt="the airport">
+        </div>
+      </div>
+
+      <div class="decorBlock2">
+        <img src="img/pngkit_wave-png_97160.png" alt="decor" id="imgDecor1">
+        <img src="img/kisspng-light-designer.png" alt="decor" id="imgDecor2">
+      </div>
+
+      <div class="blockEnd">
+        <div class="blockEndInfo">
+          <p class="sec-textContainer" align="justify">Мы хотели бы узнать
+            больше о вашем путешествии. Если у вас есть вопросы или желание
+            присылать нам любые комментарии, предложения или запросы переходите
+            по ссылке ниже. Помогите нам сделать ваше путешевствие еще лучше.
+          </p>
+          <p align="right" class="review">
+            <a href="index6.html">Оставить отзывы</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- модальное окно -->
+
+    <div id="modal-1" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">АВИАКОМПАНИИ МИРА</h3>
+            <a href="#" type="reset" value="reset" onclick="window.location.reload()" class="close" title="закрыть">×</a>
+          </div>
+          <div class="modal-body">
+
+            <form method="GET" id="regForm" onsubmit="checkForm()">
+              <input type="text" id="userName" name="userName"
+              placeholder="Имя" required pattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+              <div id="contact">
+                <input type="phone" id="userPhone" name="userPhone"
+                placeholder="Моб.телефон" required pattern="[+\d]{10,}$">
+                <input type="email" name="mail" id="mail" placeholder="Почта">
+              </div>
+              <textarea name="name" rows="5" cols="35"
+                placeholder="Ваш вопрос или комментарий" id='userText'>
+              </textarea>
+              <span>Вход в личный кабинет:</span>
+              <b>Логин:</b> <input type="text" id="userLogin" name="login"
+              oninput="validateComments(this)" requiredpattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+              <b>Пароль:</b> <input type="password" id="userPas1" name="pass">
+              <p id="colorInfo">Оранжевым отмечены поля для обязательного заполнения</p>
+              <input id="button" type="submit" value="Вход в приложение"/>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-2" class="modal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">АВИАКОМПАНИИ МИРА</h3>
+            <a href="#" class="close" title="закрыть">×</a>
+          </div>
+          <div class="modal-body">
+
+            <form method="GET" id="regForm" onsubmit="checkForm()">
+              <div id="contact">
+                <input type="phone" id="userPhone" name="userPhone"
+                placeholder="Моб.телефон" required pattern="[+\d]{10,}$">
+                <div>или</div>
+                <input type="email" name="mail" id="mail" placeholder="Почта">
+              </div>
+              <input type="text" id="userName" name="userName"
+              placeholder="Ф.И.О. пользователя" required pattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+              <b>Пароль:</b> <input type="password" id="userPas1" name="pass">
+              <p id="colorInfo">Оранжевым отмечены поля для обязательного заполнения</p>
+              <input id="button" type="submit" value="Регистрация"/>
+              <b>Вы уже зарегистрированы? <a href="#" class="entry" data-toggle="modal" data-target="#modal-1">Вход</a></b>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footerContainer">
+      <div class="decorFooter">
+        <img src="img/pngkit_wave-png_97160.png" alt="" id="imgDecor1">
+        <img src="img/klipartz.png" alt="" id="imgDecor2">
+      </div>
+      <div class="info">
+        <div class="points">
+          <div class="logo1">
+            <img src="img/logo.png" alt="logo" width="60%" class="wow zoomInLeft"
+            data-wow-offset="100"
+            data-wow-delay="0.5s"
+            data-wow-duration="2s">
+          </div>
+          <div class="pointsName">
+            <div class="point"><a href="index6.html" align="left">Отзывы об авиакомпаниях</a></div>
+            <div class="point" data-toggle="modal2" data-target="#modal-2">Регистрация</div>
+            <div class="point">Звони по номеру:</div>
+            <div class="pointNumber">&plus;38 044 339&minus;&#42;&#42;&minus;&#42;&#42;</div>
+            <div class="pointNumber">&plus;38 044 339&minus;&#42;&#42;&minus;&#42;&#42;</div>
+          </div>
+        </div>
+
+        <div class="network">
+          <div class="network-icon">
+            <div class="network-text">
+              Мы в социальных сетях
+            </div>
+            <ul class="socialIcons">
+              <li onclick="newWindow = window.open('https://www.facebook.com/')"><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li onclick="newWindow = window.open('https://twitter.com/login?lang=ru')"><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li onclick="newWindow = window.open('https://www.instagram.com/')"><a class="instagram" href=""><i class="fa fa-instagram"></i></a></li>
+              <li onclick="newWindow = window.open('https://www.youtube.com/')"><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="awards">
+
+        <div class="logo2">
+          <div id="aboutAirlaines1" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-top-10-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/Skytrax-AOTY.png" alt="Skytrax logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-top-10-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Авиакомпании Года
+          </div>
+        </div>
+
+        <div class="logo2">
+          <div id="aboutAirlaines2" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-best-business-class-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/Skytrax-Winner.png" alt="Skytrax logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-best-business-class-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Лучший бизнес-класс в мире
+          </div>
+        </div>
+
+        <div class="logo2">
+          <div id="aboutAirlaines3" onclick="newWindow = window.open('https://www.tripadvisor.ru/TravelersChoice-Airlines', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/traveller-choice-award.png" alt="tripadvisor logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.tripadvisor.ru/TravelersChoice-Airlines', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Лучший бизнес-класс и еще 5 наград
+          </div>
+        </div>
+        <div class="arrow">
+          <a href="#top" class="up"> <img src="img/up.png" alt="up"> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="wow.min.js"></script>
+  <script>
+   new WOW().init();
+  </script>
+
+
+  <script type="text/javascript">
+
+  $(function() {
+
+    // <!-- Видео на шапке страницы -->
+    var slides = document.querySelectorAll('.fullscreen-bg .fullscreen-bg__video');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide,7140);
+
+
+    function nextSlide() {
+      slides[currentSlide].className = 'fullscreen-bg__video';
+      currentSlide = (currentSlide+1)%slides.length;
+      slides[currentSlide].className = 'fullscreen-bg__video showing';
+    };
+
+    // <!-- Изменение шапки страницы при скроле -->
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll >= 150) {
+        $('.containerMenu').css('background', 'rgb(0, 0, 0, 0.45)');
+        $('.containerMenu').css('borderBottom', 'rgb(16, 199, 166, 0.4) solid 2px');
+        $('.main-menu').css('background', 'rgb(0, 0, 0, 0.45)');
+      } else {
+        $('.containerMenu').css('background', 'none');
+        $('.containerMenu').css('borderBottom', 'none');
+        $('.main-menu').css('background', 'none');
+      }
+    });
+
+    // Эффект при нажатии кнопки вверх
+    $(".arrow").mousedown(function () {
+      $(".arrow").effect( "bounce", "slow" );
+      $(".arrow").css('transition', 'none');
+    });
+
+    $(".arrow").mouseup(function () {
+      setTimeout(function() {
+        $(".arrow").css('transition', '0.5s');
+      }, 1500);
+    });
+
+    // <!-- эффекты кнопки -->
+    $(window).ready(function(){
+      $(".boton").wrapInner('<div class=botontext></div>');
+      $(".botontext").clone().appendTo( $(".boton") );
+      $(".boton").append('<span class="twist"></span><span class="twist"></span><span class="twist"></span><span class="twist"></span>');
+      $(".twist").css("width", "25%").css("width", "+=3px");
+    });
+
+    // <!-- Появление багажа на ленте -->
+    $(window).scroll(function() {
+      var scrollBlock = $(window).scrollTop();
+      if (scrollBlock >= 1800) {
+        $('.baggage').addClass('baggageMove');
+        $('#bag').animate({marginLeft:'0'}, 7500);
+        $("footer").css("border-top", "none");
+      }
+    });
+
+    // <!-- Медленное появление стюардессы на фоне -->
+      $(window).scroll(function() {
+        var scrollBlock = $(window).scrollTop();
+        if (scrollBlock >= 2700) {
+          $('#stewardess').fadeIn(3500);
+        }
+    });
+
+    // <!-- Полет самолета -->
+
+    $(window).scroll(function() {
+      setTimeout(function(){
+      var scrollBlock = $(window).scrollTop();
+      if (scrollBlock >= 3400) {
+        $('#flyIn').addClass('air');
+      }
+      }, 500)
+    });
+
+    // работа модального окна
+
+    $(document).on('click', '[data-toggle="modal"]', function () {
+      var target = $(this).attr('data-target');
+      $(target).addClass('show');
+      return false;
+    });
+
+    $('.modal .close').on('click', function () {
+      $(this).closest('.modal').removeClass('show');
+      return false;
+    })
+
+    $(document).on('click', '[data-toggle="modal2"]', function () {
+      var target = $(this).attr('data-target');
+      $(target).addClass('show');
+      return false;
+    });
+    $('.modal2 .close').on('click', function () {
+      $(this).closest('.modal2').removeClass('show');
+      return false;
+    });
+
+    $('.entry').on('click', function () {
+      $(this).closest('.modal2').removeClass('show');
+      $(document).on('click', '[data-toggle="modal"]', function () {
+        var target = $(this).attr('data-target');
+        $(target).addClass('show');
+        return false;
+      });
+    });
+
+
+  });
+
+  // проверка форм
+
+  // проверка на ввод в поле с именем только букв
+  function validateComments(userName) {
+    var phoneChoice = document.getElementById('userName').value;
+    var temlateName = /^[А-Яа-яЁё\s]/i;
+       if (!temlateName.test(nameChoice)) {
+        userName.setCustomValidity("Дайте более развернутый ответ.");
+       }
+       else {
+        userName.setCustomValidity("");
+       }
+  }
+
+  // проверка на ввод в поле почты.
+  var email = document.getElementById('mail');
+  email.addEventListener("input", function(event) {
+    if(email.validity.typeMismatch) {
+      // в случае не соответствия условия - выводится сообщение
+      email.setCustomValidity("Не похоже на почту");
+    } else {
+      email.setCustomValidity("");
+    }
+  })
+
+    </script>
+
+
+
+
+</body>
+</html>

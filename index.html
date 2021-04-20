@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="animate.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <style media="screen">
+  .activeCSS {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    font-size: 17px;
+    padding: 5px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.3px black;
+    border-bottom: 3px solid rgb(0,255,255);
+    color: rgb(186, 214, 206);
+  }
+
+  @media screen and (min-width:576px) and (max-width:900px) {
+    .activeCSS {
+      border: none;
+      border-bottom: none;
+      color: rgb(0,255,255);
+     box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    .activeCSS {
+      border: none;
+      border-bottom: none;
+      color: rgb(0,255,255);
+     box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+
+  </style>
+
+  <title>Авиакомпании Мира</title>
+</head>
+<body>
+
+  <!-- Запуск страницы -->
+  <div id="preloader">
+    <div id="splashScreen"></div>
+    <div class="preloader"></div>
+  </div>
+
+  <!-- Основная страницa -->
+  <!-- шапка сайта -->
+
+  <header>
+    <div class="containerMenu">
+      <div class="logo1" onclick="newWindow = window.open('index.html')">
+        <div class="logo-img">
+          <img src="img/logo.png" alt="logo">
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-contact">
+          <button type="button" name="entrance" id="entrance" data-toggle="modal" data-target="#modal-1">ВОЙТИ</button>
+          <button type="button" name="checkIn" id="checkIn" data-toggle="modal2" data-target="#modal-2">РЕГИСТРАЦИЯ</button>
+        </div>
+        <div id="menuToggle">
+          <input id="menu-checkbox" type="checkbox">
+          <nav role="navigation">
+            <label for="menu-checkbox" class="toogle-button"></label>
+            <ul class="main-menu">
+              <li onclick="newWindow = window.open('index6.html')"><a href="#">Отзывы</a></li>
+              <!-- <li onclick="newWindow = window.open('index5.html')"><a href="#">Путешествия</a></li> -->
+              <li onclick="newWindow = window.open('index4.html')"><a href="#">Пассажирам</a></li>
+              <li onclick="newWindow = window.open('index3.html')"><a href="#">Направления</a></li>
+              <li onclick="newWindow = window.open('index2.html')"><a href="#">Авиакомпании</a></li>
+              <li onclick="newWindow = window.open('index.html')"><a href="#" class="activeCSS">Главная</a></li>
+            </ul>
+          </nav>
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fullscreen-bg">
+      <div class="overlay">
+        <h1>Авиакомпании <br>Мира</h1>
+        <br>
+        <br>
+        <h2>Путешевствуем вместе</h2>
+      </div>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video showing">
+        <source src='video/Pexels Videos.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Working in a Plane.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/production ID_2.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Girl Works in an Airplane.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/production ID_1.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Enjoys the View.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/View of a Cityscape From a Plane Porthole.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Keyboard.mp4' type='video/mp4'>
+      </video>
+      <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='video/Evening_landing.mp4' type='video/mp4'>
+      </video>
+    </div>
+    <div class="decorHeader">
+      <img src="img/pngkit_wave-png_97160.png" alt="" id="imgDecor1">
+      <img src="img/kisspng-light-designer.png" alt="" id="imgDecor2">
+    </div>
+  </header>
+
+
+  <main>
+    <div class="mainContainer">
+      <div class="sec-text">
+        <div class="heading">
+            <h1 id="heading">Авиакомпании <br> Мира </h1> <br>
+        </div>
+        <div class="about">
+          <p class="sec-textContainer" align="justify">
+            <span class="aboutSite">Наш сайт</span> - это информационный
+            источник в помощь тем, кто планирует лететь за границу.
+            В нем собраны ссылки на официальные сайты авиакомпаний с более
+            подробными их описаниями. Кроме этого на сайте имеется описание
+            информации о типах самолетов, используемых для рейсов, услугах,
+            предоставляемых в полете, отличительных особенностях авиакомпании и
+            актуальных ценах на авиабилеты. Здесь есть возможность разобрать
+            полетные карты всех авиалиний мира и получить полезные советы перед
+            подготовкой к вылету. Он поможет вам с выбором авиалинии в момент
+            планирования вашего отпуска или бизнес-поездки.
+          </p>
+        </div>
+      </div>
+      <section class="sec1"></section>
+
+      <div class="sec-text" id="sec-text1">
+        <div class="shapedRight"></div>
+        <div class="num01">01</div>
+        <h3 class="secLeft-textTitle">Авиакомпании</h3>
+        <p class="sec-textContainer" align="justify">
+          В данном разделе сайта можно найти более подробное описание самых
+          популярных авиалиний. Раздел содержит информацию об услугах на борту,
+          предоставляемых компаниями, а именно: питание и предоставляемые
+          развлечения (как платные так и бесплатные).
+        </p>
+      </div>
+      <section class="sec2"></section>
+
+      <div class="sec-text" id="sec-text2">
+        <div class="shapedLeft"></div>
+        <div class="num02">02</div>
+        <h3 class="secRight-textTitle">Направления</h3>
+        <p class="sec-textContainer" align="justify">
+          В данном разделе сайта можно изучить направления полетов самолетов
+          онлайн, проследить движение всех рейсов в небе, получить данные
+          полетных карт и номеров рейсов, а также их направление, проверить
+          полетные и погодные условия в разных уголках мира.
+        </p>
+      </div>
+      <section class="sec3"></section>
+
+      <div class="sec-text" id="sec-text1">
+        <div class="shapedRight"></div>
+        <div class="num03">03</div>
+        <h3 class="secLeft-textTitle">Пассажирам</h3>
+        <p class="sec-textContainer" align="justify">
+          В данном разделе сайта можно получить рекомендации и информацию по
+          подготовке к вылету за границу пассажиров: подготовка багажа, вылет
+          за границу с животными, необходимые документы для вылета, что
+          необходимо знать в связи с пандемией COVID-19 и т.д.
+        </p>
+      </div>
+      <section class="sec4"></section>
+
+      <div class="sec-text" id="sec-text2">
+        <div class="shapedLeft"></div>
+        <div class="num04">04</div>
+        <h3 class="secRight-textTitle">Путешествия</h3>
+        <p class="sec-textContainer" align="justify">
+          В данном разделе сайта представлены отзывы клиентов о разных
+          авиакомпаниях, о предоставляемых услугах на борту авиалайнеров,
+          их сравнительных характеристиках. Отзывы о сервисе, обслуживании и
+          питании. Фото путешевственников из разных уголков мира, куда авиалинии
+          мира могут перенести по желанию любоого своего клиента.
+        </p>
+      </div>
+      <section class="sec5"></section>
+
+      <!-- модальное окно -->
+
+      <div id="modal-1" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">АВИАКОМПАНИИ МИРА</h3>
+              <a href="#" type="reset" value="reset" onclick="window.location.reload()" class="close" title="закрыть">×</a>
+            </div>
+            <div class="modal-body">
+
+              <form method="GET" id="regForm" onsubmit="checkForm()">
+                <input type="text" id="userName" name="userName"
+                placeholder="Имя" required pattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                <div id="contact">
+                  <input type="phone" id="userPhone" name="userPhone"
+                  placeholder="Моб.телефон" required pattern="[+\d]{10,}$">
+                  <input type="email" name="mail" id="mail" placeholder="Почта">
+                </div>
+                <textarea name="name" rows="5" cols="35"
+                  placeholder="Ваш вопрос или комментарий" id='userText'>
+                </textarea>
+                <span>Вход в личный кабинет:</span>
+                <b>Логин:</b> <input type="text" id="userLogin" name="login"
+                oninput="validateComments(this)" requiredpattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                <b>Пароль:</b> <input type="password" id="userPas1" name="pass">
+                <p id="colorInfo">Оранжевым отмечены поля для обязательного заполнения</p>
+                <input id="button" type="submit" value="Вход в приложение"/>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-2" class="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">АВИАКОМПАНИИ МИРА</h3>
+              <a href="#" class="close" title="закрыть">×</a>
+            </div>
+            <div class="modal-body">
+
+              <form action="telegram.php" method="POST" id="regForm" onsubmit="checkForm()">
+                <div id="contact">
+                  <input type="phone" id="userPhone" name="userPhone"
+                  placeholder="Моб.телефон" required pattern="[+\d]{10,}$">
+                  <div>или</div>
+                  <input type="email" name="mail" id="mail" placeholder="Почта">
+                </div>
+                <input type="text" id="userName" name="userName"
+                placeholder="Ф.И.О. пользователя" required pattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                <b>Пароль:</b> <input type="password" id="userPas1" name="pass">
+                <p id="colorInfo">Оранжевым отмечены поля для обязательного заполнения</p>
+                <input id="button" class="btn btn-primary" type="submit" value="Регистрация"/>
+                <b>Вы уже зарегистрированы? <a href="#" class="entry" data-toggle="modal" data-target="#modal-1">Вход</a></b>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footerContainer">
+      <div class="decorFooter">
+        <img src="img/pngkit_wave-png_97160.png" alt="" id="imgDecor1">
+        <img src="img/klipartz.png" alt="" id="imgDecor2">
+      </div>
+      <div class="info">
+        <div class="points">
+          <div class="logo1">
+            <img src="img/logo.png" alt="logo" width="60%" class="wow zoomInLeft"
+            data-wow-offset="100"
+            data-wow-delay="0.5s"
+            data-wow-duration="2s">
+          </div>
+          <div class="pointsName">
+            <div class="point"><a href="index6.html" align="left">Отзывы об авиакомпаниях</a></div>
+            <div class="point" data-toggle="modal2" data-target="#modal-2">Регистрация</div>
+            <div class="point">Наш контактный телефон:</div>
+            <div class="pointNumber">&plus;38 044 339&minus;&#42;&#42;&minus;&#42;&#42;</div>
+            <div class="pointNumber">&plus;38 044 339&minus;&#42;&#42;&minus;&#42;&#42;</div>
+          </div>
+        </div>
+
+        <div class="network">
+          <div class="network-icon">
+            <div class="network-text">
+              Мы в социальных сетях
+            </div>
+            <ul class="socialIcons">
+              <li onclick="newWindow = window.open('https://www.facebook.com/')"><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li onclick="newWindow = window.open('https://twitter.com/login?lang=ru')"><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li onclick="newWindow = window.open('https://www.instagram.com/')"><a class="instagram" href=""><i class="fa fa-instagram"></i></a></li>
+              <li onclick="newWindow = window.open('https://www.youtube.com/')"><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="awards">
+
+        <div class="logo2">
+          <div id="aboutAirlaines1" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-top-10-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/Skytrax-AOTY.png" alt="Skytrax logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-top-10-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Авиакомпании Года
+          </div>
+        </div>
+
+        <div class="logo2">
+          <div id="aboutAirlaines2" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-best-business-class-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/Skytrax-Winner.png" alt="Skytrax logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-best-business-class-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Лучший бизнес-класс в мире
+          </div>
+        </div>
+
+        <div class="logo2">
+          <div id="aboutAirlaines3" onclick="newWindow = window.open('https://www.tripadvisor.ru/TravelersChoice-Airlines', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/traveller-choice-award.png" alt="tripadvisor logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.tripadvisor.ru/TravelersChoice-Airlines', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Лучший бизнес-класс и еще 5 наград
+          </div>
+        </div>
+        <div class="arrow">
+          <a href="#top" class="up"> <img src="img/up.png" alt="up"> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="wow.min.js"></script>
+  <script>
+   new WOW().init();
+  </script>
+
+
+  <script type="text/javascript">
+
+  $(function() {
+    $('header').css({display: "none"});
+    $('main').css({display: "none"});
+    $('footer').css({display: "none"});
+
+    // <!-- Прелоадер -->
+    setTimeout(function(){
+      $('header').css({display: "inherit"});
+      $('main').css({display: "inherit"});
+      $('footer').css({display: "inherit"});
+      $( "#splashScreen" ).effect( "puff", "slow" );
+      $('.preloader').effect( "explode", "slow" );
+    }, 7400);
+
+    // <!-- Видео на шапке страницы -->
+    var slides = document.querySelectorAll('.fullscreen-bg .fullscreen-bg__video');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide,12680);
+
+    function nextSlide() {
+      slides[currentSlide].className = 'fullscreen-bg__video';
+      currentSlide = (currentSlide+1)%slides.length;
+      slides[currentSlide].className = 'fullscreen-bg__video showing';
+    };
+
+    // <!-- Изменение шапки страницы при скроле -->
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll >= 150) {
+        $('.containerMenu').css('background', 'rgb(0, 0, 0, 0.45)');
+        $('.containerMenu').css('borderBottom', 'rgb(16, 199, 166, 0.4) solid 2px');
+        $('.main-menu').css('background', 'rgb(0, 0, 0, 0.45)');
+        $('.containerMenu').stop().css('background', 'rgb(0, 0, 0, 0.45)');
+      } else {
+        $('.containerMenu').css('background', 'none');
+        $('.containerMenu').css('borderBottom', 'none');
+        $('.main-menu').css('background', 'none');
+        $('.containerMenu').stop().css('background', 'none');
+      }
+    });
+
+
+    /* <!-- Модальное окно --> */
+    setTimeout(function() {
+      $('body').css('background', '#000000');
+      $('body').css('opacity', 0.4);
+    }, 12950);
+
+    setTimeout(function() {
+      let result = confirm('Разрешить приложению отправлять вам уведомления?');
+
+      if (result == true) {
+        $('body').css('background', 'none');
+        $('body').css('opacity', 1);
+      } else {
+        $('body').css('background', 'none');
+        $('body').css('opacity', 1);
+      }
+    }, 13000);
+
+
+    // <!-- Анимации появления номера на странице -->
+    $(window).scroll(function() {
+      var scrollBlock = $(window).scrollTop();
+      if (scrollBlock >= 1450) {
+        $('.num01').css('color', 'rgb(81, 230, 203)');
+        $('.num01').animate({marginLeft:'-5vw'}, 600);
+      }
+    });
+
+    $(window).scroll(function() {
+      var scrollBlock = $(window).scrollTop();
+      if (scrollBlock >= 2220) {
+        $('.num02').css('color', 'rgb(81, 230, 203)');
+        $('.num02').animate({marginLeft:'38vw'}, 1000);
+      }
+    });
+
+    $(window).scroll(function() {
+      var scrollBlock = $(window).scrollTop();
+      if (scrollBlock >= 2960) {
+        $('.num03').css('color', 'rgb(81, 230, 203)');
+        $('.num03').animate({marginLeft:'-5vw'}, 400);
+      }
+    });
+
+    $(window).scroll(function() {
+      var scrollBlock = $(window).scrollTop();
+      if (scrollBlock >= 4000) {
+        $('.num04').css('color', 'rgb(81, 230, 203)');
+        $('.num04').animate({marginLeft:'38vw'}, 1000);
+      }
+    });
+
+    // Эффект при нажатии кнопки вверх
+    $(".arrow").mousedown(function () {
+      $(".arrow").effect( "bounce", "slow" );
+      $(".arrow").css('transition', 'none');
+    });
+
+    $(".arrow").mouseup(function () {
+      setTimeout(function() {
+        $(".arrow").css('transition', '0.5s');
+      }, 1500);
+    });
+
+    // работа модального окна
+
+    $(document).on('click', '[data-toggle="modal"]', function () {
+      var target = $(this).attr('data-target');
+      $(target).addClass('show');
+      return false;
+    });
+
+    $('.modal .close').on('click', function () {
+      $(this).closest('.modal').removeClass('show');
+      return false;
+    });
+
+    $(document).on('click', '[data-toggle="modal2"]', function () {
+      var target = $(this).attr('data-target');
+      $(target).addClass('show');
+      return false;
+    });
+    $('.modal2 .close').on('click', function () {
+      $(this).closest('.modal2').removeClass('show');
+      return false;
+    });
+
+    $('.entry').on('click', function () {
+      $(this).closest('.modal2').removeClass('show');
+      $(document).on('click', '[data-toggle="modal"]', function () {
+        var target = $(this).attr('data-target');
+        $(target).addClass('show');
+        return false;
+      });
+    });
+
+  });
+
+  // проверка форм
+
+  // проверка на ввод в поле с именем только букв
+  function validateComments(userName) {
+    var phoneChoice = document.getElementById('userName').value;
+    var temlateName = /^[А-Яа-яЁё\s]/i;
+       if (!temlateName.test(nameChoice)) {
+        userName.setCustomValidity("Дайте более развернутый ответ.");
+       }
+       else {
+        userName.setCustomValidity("");
+       }
+  }
+
+  // проверка на ввод в поле почты.
+  var email = document.getElementById('mail');
+  email.addEventListener("input", function(event) {
+    if(email.validity.typeMismatch) {
+      // в случае не соответствия условия - выводится сообщение
+      email.setCustomValidity("Не похоже на почту");
+    } else {
+      email.setCustomValidity("");
+    }
+  })
+
+
+  </script>
+</body>
+</html>

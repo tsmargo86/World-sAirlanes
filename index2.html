@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <link rel="stylesheet" href="animate.css">
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <style media="screen">
+  .activeCSS {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    font-size: 17px;
+    padding: 5px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.3px black;
+    border-bottom: 3px solid rgb(0,255,255);
+    color: rgb(186, 214, 206);
+  }
+
+  .fullscreen-bg {
+    background: url('img/Passenger_Airplanes.jpg');
+    background-position: bottom;
+    background-size: cover;
+  }
+
+  @media screen and (min-width:576px) and (max-width:900px) {
+    .activeCSS {
+      border: none;
+      border-bottom: none;
+      color: rgb(0,255,255);
+     box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    .activeCSS {
+      border: none;
+      border-bottom: none;
+      color: rgb(0,255,255);
+     box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+
+  </style>
+  <title>Авиакомпании Мира</title>
+</head>
+<body>
+
+  <!-- Основная страницa -->
+  <!-- шапка сайта -->
+
+  <header>
+    <div class="containerMenu">
+      <div class="logo1" onclick="newWindow = window.open('index.html')">
+        <div class="logo-img">
+          <img src="img/logo.png" alt="logo">
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-contact">
+          <button type="button" name="entrance" id="entrance" data-toggle="modal" data-target="#modal-1">ВОЙТИ</button>
+          <button type="button" name="checkIn" id="checkIn" data-toggle="modal2" data-target="#modal-2">РЕГИСТРАЦИЯ</button>
+        </div>
+        <div id="menuToggle">
+          <input id="menu-checkbox" type="checkbox">
+          <nav role="navigation">
+            <label for="menu-checkbox" class="toogle-button"></label>
+            <ul class="main-menu">
+              <li onclick="newWindow = window.open('index6.html')"><a href="#">Отзывы</a></li>
+              <!-- <li onclick="newWindow = window.open('index5.html')"><a href="#">Путешествия</a></li> -->
+              <li onclick="newWindow = window.open('index4.html')"><a href="#">Пассажирам</a></li>
+              <li onclick="newWindow = window.open('index3.html')"><a href="#">Направления</a></li>
+              <li onclick="newWindow = window.open('index2.html')"><a href="#" class="activeCSS">Авиакомпании</a></li>
+              <li onclick="newWindow = window.open('index.html')"><a href="#">Главная</a></li>
+            </ul>
+          </nav>
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fullscreen-bg">
+      <div class="overlay">
+        <h1>Авиакомпании <br>Мира</h1>
+        <br>
+        <br>
+        <h2>Путешевствуем вместе</h2>
+      </div>
+
+      <!-- <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
+        <source src='' type='video/mp4'>
+      </video> -->
+
+    </div>
+    <div class="decorHeader">
+      <img src="img/pngkit_wave-png_97160.png" alt="" id="imgDecor1">
+      <img src="img/kisspng-light-designer.png" alt="" id="imgDecor2">
+    </div>
+  </header>
+
+  <main>
+    <div class="mainContainer">
+      <div class="infoForUser">
+        <h1>Авиакомпании</h1>
+        <p class="sec-textContainer" align="justify">
+          В данном разделе сайта собраны ссылки на официальные сайты авиакомпаний
+          которые предоставляют их полное описание.
+          Каждое описание содержит информацию об истории авиакомпании, типах
+          самолетов, используемых для рейсов, услугах, предоставляемых в
+          полете, отличительных особенностях авиакомпании и актуальных
+          ценах на авиабилеты.
+        </p>
+      </div>
+
+      <div class="airlaines">
+        <div class="containerBlock">
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/qatar.png" alt="qatar" width="100%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: Qatar Airways</h3>
+                <p>ICAO: QTR</p>
+                <p>IATA: QR</p>
+                <p>Сайт: <a href="https://www.qatarairways.com/ru-ru/discover.html">www.qatarairways.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock">
+            <div class="text-plane" align="justify">
+              «Катар» (Qatar Airways) — национальная авиакомпания страны,
+              осуществляет международные вылеты из Дохи. По версии британского
+              агентства Skytrax «Катар» входит в пятизвездочный рейтинг
+              авиакомпаний (всего столь высокий статус заслужили еще только пять
+              воздушных перевозчиков).Авиакомпания выполняет рейсы по более 160
+              пунктам назначения, из которых все являются международными. Qatar
+              Airways входит в список семи авиакомпаний, имеющих высший
+              пятизвёздочный рейтинг по версии британского агентства Skytrax.
+              Член авиационного альянса пассажирских перевозок Oneworld.
+              «Катар» не зря считается пятизвездочной авиакомпанией. На борту
+              пассажиры первого и бизнес-класса смогут на себе почувствовать,
+              что значит арабская роскошь и комфорт. Индивидуальное обслуживание,
+              прекрасное меню, роскошные вина, китайский фарфор и белые скатерти,
+              кофе или финики в подарок — из всего этого создается настроение.
+              Салон первого класса имеется только на борту самолётов A380-800.
+              Пассажирам предоставляется комфорт раскладывающихся полностью в
+              горизонтальное положение пассажирских кресел, 15-дюймовые экраны
+              с системой персональных развлечений в полёте, включая телевидение,
+              многоканальные звуковые трансляции, персональный телефон,
+              электрические розетки, постельные принадлежности, пижаму и другие
+              ночные аксессуары.
+              Пассажирам бизнес-класса предлагаются удобства кресел,
+              раскладывающихся в горизонтальное положение кровати. В 2017 году
+              салон бизнес – класса авиакомпании был признан лучшим среди всех
+              авиакомпаний мира по версии агентства Skytrax.
+            </div>
+            <div class="port-plane">
+              <div class="info-range">
+                <div class="number-range">6 лет</div>
+                <div class="text-range">
+                  Средний возраст самолета
+                </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230885.98976438012!2d51.37190814416509!3d25.284253422411027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c534ffdce87f%3A0x44d9319f78cfd4b1!2z0JTQvtGF0LAsINCa0LDRgtCw0YA!5e0!3m2!1sru!2sua!4v1618440281062!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/turkish.png" alt="turkish" width="50%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: Turkish Airlines</h3>
+                <p>ICAO: THY</p>
+                <p>IATA: TK</p>
+                <p>Сайт: <a href="https://www.google.com/search?q=cfqn+nehtwrb%5B+fdbfkbybq&rlz=1C1CHBD_ruUA809UA809&oq=cfqn+nehtwrb%5B+fdbfkbybq&aqs=chrome..69i57j0i10l3.5815j0j15&sourceid=chrome&ie=UTF-8#">www.turkishairlines.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock">
+            <div class="text-plane" align="justify">
+            Авиакомпания Turkish Airlines это крупный авиаперевозчик из Турции.
+            Аэропорт базирования находится в Стамбуле. Совершает регулярные
+            рейсы в 220 иностранных и 42 внутренних аэропорта в Европе, Азии,
+            Африке и Америке. Турецкие авиалинии обслуживают 220 назначений за
+            пределами Турции в около 120 стран. Совершаются рейсы через
+            Атлантический океан в Северную Америку, в Южную — Богота,
+            Буэнос-Айрес, Сан-Паулу.
+            Турецкие авиалинии объявили о планируемых рейсах в Гавана, Каракас,
+            Мехико; среднемагистральных рейсов в 2016 году, однако в связи с
+            задержками в поступлении новых самолётов эти сроки выдержаны не будут.
+            Авиакомпания осуществляет и регулярные рейсы. По состоянию на июль
+            2018 года флот Turkish Airlines состоит из 328 самолётов, не считая
+            флота дочерних компаний.
+          </div>
+          <div class="port-plane">
+            <div class="info-range">
+              <div class="number-range">6 лет</div>
+              <div class="text-range">
+                Средний возраст самолета
+              </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232159.6091060622!2d32.90327351532919!3d40.13456232821828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40820fdad0c982a9%3A0xf13ed2bab75c76d6!2z0JzQtdC20LTRg9C90LDRgNC-0LTQvdGL0Lkg0LDRjdGA0L7Qv9C-0YDRgiDQrdGB0LXQvdCx0L7Qs9Cw!5e0!3m2!1sru!2sua!4v1618442953888!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/may.png" alt="may" width="100%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: Международные Авиалинии Украины</h3>
+                <p>ICAO: AUI</p>
+                <p>IATA: PS</p>
+                <p>Сайт: <a href="https://www.flyuia.com/ua/ua/home">www.flyuia.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock">
+            <div class="text-plane" align="justify">
+              В настоящее время авиакомпания выполняет около 1100 международных и
+              внутренних рейсов в неделю, соединяя Украину (Киев, Львов, Запорожье,
+              Днепр, Одесса, Харьков, Ивано-Франковск, Винница, Херсон, Черновцы)
+              и 40 столиц и крупных городов Европы, СНГ, Северной Америки, Азии,
+              Ближнего Востока и Африки. Также МАУ обеспечивает стыковки с
+              маршрутами своих международных партнёров в более 3000 направлений
+              по всему миру.
+              МАУ обладает сертификатом JAR-145, который даёт право на полный цикл
+              технического обслуживания техники фирмы Boeing, включая выполнение
+              сложных форм техобслуживания C-Check и D-Check. Сертифицирована IOSA
+              и IATA, а также Европейским агентством по безопасности авиаперевозок
+              (EASA).
+            </div>
+            <div class="port-plane">
+              <div class="info-range">
+                <div class="number-range">12 лет</div>
+                <div class="text-range">
+                  Средний возраст самолета
+                </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1302241.3633950115!2d30.07029558030814!3d50.39563399635207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4e8fa667ec5d1%3A0x690a2c5d49d870da!2z0JDRjdGA0L7Qv9C-0YDRgiDQmtC40LXQsiDQkdC-0YDQuNGB0L_QvtC70Yw!5e0!3m2!1sru!2sua!4v1618443499474!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/Pegasus_Logo.jpg" alt="Pegasus" width="100%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: PEGASUS AIRLINES</h3>
+                <p>ICAO: PGT</p>
+                <p>IATA: PC</p>
+                <p>Сайт: <a href="https://www.flypgs.com/en">www.flypgs.com/en</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock">
+            <div class="text-plane" align="justify">
+              Pegasus Airlines – турецкая бюджетная авиакомпания, базирующаяся в
+              районе Халкалы. Она осуществляет регулярные и чартерные пассажирские
+              авиаперевозки по Европе и Турции. Основная база — Международный
+              аэропорт имени Сабихи Гёкчен. Ранее была чартерным партнёром для
+              ирландской авиакомпании Aer Lingus.Авиакомпания осуществляет
+              регулярные рейсы в Москву (аэропорт «Домодедово»), Омск, Минеральные
+              Воды, Краснодар и Сочи; чартерные – в Новосибирск. После ухудшения
+              Российско-турецких отношений в 2015 году, авиакомпания с 1 января
+              2016 года приостановила полёты в Россию. С 15 января 2016 года
+              авиакомпания возобновила регулярные рейсы.
+              Размер флота составляет 74 воздушных судов. В августе 2017 года
+              средний возраст парка Pegasus Airlines составлял 6 лет.
+            </div>
+            <div class="port-plane">
+              <div class="info-range">
+                <div class="number-range">5 лет</div>
+                <div class="text-range">
+                  Средний возраст самолета
+                </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232159.6091060622!2d32.90327351532919!3d40.13456232821828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40820fdad0c982a9%3A0xf13ed2bab75c76d6!2z0JzQtdC20LTRg9C90LDRgNC-0LTQvdGL0Lkg0LDRjdGA0L7Qv9C-0YDRgiDQrdGB0LXQvdCx0L7Qs9Cw!5e0!3m2!1sru!2sua!4v1618442953888!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/flajdubaj-300x180.gif" alt="flajdubaj" width="80%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: Fly Dubai</h3>
+                <p>ICAO: Flydubai</p>
+                <p>IATA: FZ</p>
+                <p>Сайт: <a href="https://www.flydubai.com/ru/">www.flydubai.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock">
+            <div class="text-plane" align="justify">
+              По состоянию на май 2017 года flydubai
+              обслуживает более 90 направлений. В настоящее время авиакомпания
+              имеет один хаб и работает из Терминала 2 Международный аэропорт Дубая.
+              Однако, чтобы учесть растущую авиакомпанию и расширение национальной
+              авиакомпании в DXBflydubai начала выполнять рейсы из Аль-Мактум
+              Интернэшнл (DWC) с 25 октября 2015 года. Авиакомпания начала с 70
+              рейсов в неделю в Амман, Бейрут, Читтагонг, Доху, Катманду, Кувейт
+              и Маскат из DWC.
+            </div>
+            <div class="port-plane">
+              <div class="info-range">
+                <div class="number-range">4 года</div>
+                <div class="text-range">
+                  Средний возраст самолета
+                </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1308760.4988241894!2d54.51980976356219!3d25.034945842257528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2z0JTRg9Cx0LDQuSAtINCe0LHRitC10LTQuNC90LXQvdC90YvQtSDQkNGA0LDQsdGB0LrQuNC1INCt0LzQuNGA0LDRgtGL!5e0!3m2!1sru!2sua!4v1618444409343!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/wizz.png" alt="wizz" width="70%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: WizzАir Ukraine</h3>
+                <p>ICAO: WAU</p>
+                <p>IATA: WU</p>
+                <p>Сайт: <a href="http://wizzair.com">www.wizzair.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock">
+            <div class="text-plane" align="justify">
+              Авиакомпания WIZZ AIR это венгерский лоукостер со штаб-квартирой в
+              Вечеше. Первый рейс состоялся 19 мая 2004 года из города Катовице.
+              Сегодня компания Wizz Air предлагает пассажирам рейсы по более чем
+              420 маршрутам из 22 базовых аэропортов региона. В 2016 году компания
+              Wizz Air была признана «Бюджетным авиаперевозчиком года» по версии
+              журнала Air Transport World, ведущего отраслевого издания.
+              В настоящее время Wizz Air предлагает перелеты по более чем 420
+              маршрутам внутри Европы и за ее пределами. Как и другие лоу-кост
+              компании, WizzAir ставит жёсткие ограничения на ручную кладь,
+              провозимую в салоне самолёта. Размер флота составляет 63 самолета.
+            </div>
+            <div class="port-plane">
+              <div class="info-range">
+                <div class="number-range">4 года</div>
+                <div class="text-range">
+                  Средний возраст самолета
+                </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96806.9259871998!2d30.37958223508691!3d50.38718091081037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c9164b9b1a45%3A0xe9d7665f198fd0a7!2z0JbRg9C70Y_QvdGLLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1618444588757!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/klm.png" alt="klm" width="75%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: KLM Airlines</h3>
+                <p>ICAO: KLM</p>
+                <p>IATA: KL</p>
+                <p>Сайт: <a href="http://klm.com">www.klm.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock">
+            <div class="text-plane" align="justify">
+              KLM — старейшая авиакомпания, сохранившая своё первоначальное название.
+              Авиакомпания KLM была основана 7 октября 1919 года. Сейчас она
+              является старейшей в мире компанией, выполняющей регулярные рейсы.
+              С 2004 года является частью Air France-KLM. Штаб-квартира
+              располагается в Амстердаме рядом со своим узловым аэропортом Схипхол.
+              Слияние с Air France в мае 2004 года привело к созданию Air
+              France-KLM, хотя обе компании летают под своими именами.
+              Размер флота – 115. Средний возраст флота KLM составит 10,3 года.
+            </div>
+            <div class="port-plane">
+              <div class="info-range">
+                <div class="number-range">11 лет</div>
+                <div class="text-range">
+                  Средний возраст самолета
+                </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d220732.99902078568!2d4.519936113530929!3d52.320028368354066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JDQvNGB0YLQtdGA0LTQsNC8INCh0YXQuNC_0YXQvtC7!5e0!3m2!1sru!2sua!4v1618444881446!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/emirates.png" alt="emirates" width="80%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: Emirates Airlines</h3>
+                <p>ICAO: UAE</p>
+                <p>IATA: EK</p>
+                <p>Сайт: <a href="http://emirates.com">www.emirates.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock">
+            <div class="text-plane" align="justify">
+              Авиакомпания Emirates Airline — один из крупнейших авиаперевозчиков
+              мира, родом из Объединенных Арабских Эмиратов. Портом приписки
+              значится Дубай. Среди основных пунктов назначения «Emirates Airline» —
+              Лондон, Сидней, Нью-Йорк, Куала-Лумпур, Доха и другие города.
+              Авиакомпания выполняет более 3000 рейсов в неделю и имеет маршрутную
+              сеть из 142 пунктов назначения в 78 странах мира на шести континентах.
+              Всего флот Emirates Airline включает в себя больше 170 самолетов.
+              Подавляющее число рейсов выполняется на Boeing 777 и Airbus A380.
+              У авиакомпании есть на свои мобильные приложения на платформах Apple
+              и Android.
+            </div>
+            <div class="port-plane">
+              <div class="info-range">
+                <div class="number-range">6 лет</div>
+                <div class="text-range">
+                  Средний возраст самолета
+                </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1308760.4988241894!2d54.51980976356219!3d25.034945842257528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2z0JTRg9Cx0LDQuSAtINCe0LHRitC10LTQuNC90LXQvdC90YvQtSDQkNGA0LDQsdGB0LrQuNC1INCt0LzQuNGA0LDRgtGL!5e0!3m2!1sru!2sua!4v1618444409343!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="airlainesInfo">
+            <div class="logoText">
+              <div class="contImg">
+                <img src="img/etihad.png" alt="etihad" width="60%">
+              </div>
+              <div class="contText">
+                <h3>Авиакомпания: Etihad Airways</h3>
+                <p>ICAO: ETD</p>
+                <p>IATA: EY</p>
+                <p>Сайт: <a href="http://etihadairways.com">www.etihadairways.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutBlock" align="justify">
+            <div class="text-plane" align="justify">
+              Национальная авиакомпания Объединённых Арабских Эмиратов, 2-я после
+              Эмирейтс крупнейшая авиакомпания ОАЭ, обладает самым молодым
+              авиапарком на Ближнем Востоке, неоднократно признавалась лучшей
+              авиакомпанией Ближнего Востока. Etihad Airways была основана как
+              национальная авиакомпания Объединенных Арабских Эмиратов в июле
+              2003 года королевским указом шейха Халифы бин Зайеда аль Найана.
+              Порт приписки авиакомпании находится в городе Абу-Даби. 12 ноября
+              2003 года Etihad начала регулярные рейсы в Бейрут и стала самой
+              быстро развивающейся авиакомпанией за всю историю коммерческой
+              авиации. Пассажирооборот увеличивается ежегодно на 20-25%, что
+              позволило компании стать четвертой, по величине, в Азии. Маршрутная
+              сеть охватывает 96 направлений. Etihad Airways летает на 117
+              воздушных суднах, средний возраст которых составляет 6 лет.
+              Авиакомппания занимает пятое место в рейтинге самых безопасных
+              воздушных перевозчиков мира.
+            </div>
+            <div class="port-plane">
+              <div class="info-range">
+                <div class="number-range">6 лет</div>
+                <div class="text-range">
+                  Средний возраст самолета
+                </div>
+              </div>
+              <div class="port-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465130.3070319369!2d54.27841717845559!3d24.387198385250613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2z0JDQsdGDLdCU0LDQsdC4IC0g0J7QsdGK0LXQtNC40L3QtdC90L3Ri9C1INCQ0YDQsNCx0YHQutC40LUg0K3QvNC40YDQsNGC0Ys!5e0!3m2!1sru!2sua!4v1618442820327!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Базовый аэропорт компании</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- модальное окно -->
+
+      <div id="modal-1" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">АВИАКОМПАНИИ МИРА</h3>
+              <a href="#" type="reset" value="reset" onclick="window.location.reload()" class="close" title="закрыть">×</a>
+            </div>
+            <div class="modal-body">
+
+              <form method="GET" id="regForm" onsubmit="checkForm()">
+                <input type="text" id="userName" name="userName"
+                placeholder="Имя" required pattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                <div id="contact">
+                  <input type="phone" id="userPhone" name="userPhone"
+                  placeholder="Моб.телефон" required pattern="[+\d]{10,}$">
+                  <input type="email" name="mail" id="mail" placeholder="Почта">
+                </div>
+                <textarea name="name" rows="5" cols="35"
+                  placeholder="Ваш вопрос или комментарий" id='userText'>
+                </textarea>
+                <span>Вход в личный кабинет:</span>
+                <b>Логин:</b> <input type="text" id="userLogin" name="login"
+                oninput="validateComments(this)" requiredpattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                <b>Пароль:</b> <input type="password" id="userPas1" name="pass">
+                <p id="colorInfo">Оранжевым отмечены поля для обязательного заполнения</p>
+                <input id="button" type="submit" value="Вход в приложение"/>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-2" class="modal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">АВИАКОМПАНИИ МИРА</h3>
+              <a href="#" class="close" title="закрыть">×</a>
+            </div>
+            <div class="modal-body">
+
+              <form method="GET" id="regForm" onsubmit="checkForm()">
+                <div id="contact">
+                  <input type="phone" id="userPhone" name="userPhone"
+                  placeholder="Моб.телефон" required pattern="[+\d]{10,}$">
+                  <div>или</div>
+                  <input type="email" name="mail" id="mail" placeholder="Почта">
+                </div>
+                <input type="text" id="userName" name="userName"
+                placeholder="Ф.И.О. пользователя" required pattern="^(?=.*[АA-ЯZaa-яzЁё])[^d]{1,}$">
+                <b>Пароль:</b> <input type="password" id="userPas1" name="pass">
+                <p id="colorInfo">Оранжевым отмечены поля для обязательного заполнения</p>
+                <input id="button" type="submit" value="Регистрация"/>
+                <b>Вы уже зарегистрированы? <a href="#" class="entry" data-toggle="modal" data-target="#modal-1">Вход</a></b>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footerContainer">
+      <div class="decorFooter">
+        <img src="img/pngkit_wave-png_97160.png" alt="" id="imgDecor1">
+        <img src="img/klipartz.png" alt="" id="imgDecor2">
+      </div>
+      <div class="info">
+        <div class="points">
+          <div class="logo1">
+            <img src="img/logo.png" alt="logo" width="60%" class="wow zoomInLeft"
+            data-wow-offset="100"
+            data-wow-delay="0.5s"
+            data-wow-duration="2s">
+          </div>
+          <div class="pointsName">
+            <div class="point"><a href="index6.html" align="left">Отзывы об авиакомпаниях</a></div>
+            <div class="point" data-toggle="modal2" data-target="#modal-2">Регистрация</div>
+            <div class="point">Наш контактный телефон:</div>
+            <div class="pointNumber">&plus;38 044 339&minus;&#42;&#42;&minus;&#42;&#42;</div>
+            <div class="pointNumber">&plus;38 044 339&minus;&#42;&#42;&minus;&#42;&#42;</div>
+          </div>
+        </div>
+
+        <div class="network">
+          <div class="network-icon">
+            <div class="network-text">
+              Мы в социальных сетях
+            </div>
+            <ul class="socialIcons">
+              <li onclick="newWindow = window.open('https://www.facebook.com/')"><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li onclick="newWindow = window.open('https://twitter.com/login?lang=ru')"><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li onclick="newWindow = window.open('https://www.instagram.com/')"><a class="instagram" href=""><i class="fa fa-instagram"></i></a></li>
+              <li onclick="newWindow = window.open('https://www.youtube.com/')"><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="awards">
+
+        <div class="logo2">
+          <div id="aboutAirlaines1" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-top-10-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/Skytrax-AOTY.png" alt="Skytrax logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-top-10-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Авиакомпании Года
+          </div>
+        </div>
+
+        <div class="logo2">
+          <div id="aboutAirlaines2" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-best-business-class-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/Skytrax-Winner.png" alt="Skytrax logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.worldairlineawards.com/worlds-best-business-class-airlines-2019/', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Лучший бизнес-класс в мире
+          </div>
+        </div>
+
+        <div class="logo2">
+          <div id="aboutAirlaines3" onclick="newWindow = window.open('https://www.tripadvisor.ru/TravelersChoice-Airlines', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            <img src="img/traveller-choice-award.png" alt="tripadvisor logo">
+          </div>
+          <div class="awardsText" onclick="newWindow = window.open('https://www.tripadvisor.ru/TravelersChoice-Airlines', 'Stepwin', 'resizable')", "newWindow.resizeTo(800, 600)">
+            Лучший бизнес-класс и еще 5 наград
+          </div>
+        </div>
+        <div class="arrow">
+          <a href="#top" class="up"> <img src="img/up.png" alt="up"> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="wow.min.js"></script>
+  <script>
+   new WOW().init();
+  </script>
+
+
+  <script type="text/javascript">
+
+  $(function() {
+
+    // <!-- Изменение шапки страницы при скроле -->
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll >= 150) {
+        $('.containerMenu').css('background', 'rgb(0, 0, 0, 0.45)');
+        $('.containerMenu').css('borderBottom', 'rgb(16, 199, 166, 0.4) solid 2px');
+        $('.main-menu').css('background', 'rgb(0, 0, 0, 0.45)');
+        $('.containerMenu').stop().css('background', 'rgb(0, 0, 0, 0.45)');
+      } else {
+        $('.containerMenu').css('background', 'none');
+        $('.containerMenu').css('borderBottom', 'none');
+        $('.main-menu').css('background', 'none');
+        $('.containerMenu').stop().css('background', 'none');
+      }
+    });
+
+
+    /* <!-- Модальное окно --> */
+    // setTimeout(function() {
+    //   $('body').css('background', '#000000');
+    //   $('body').css('opacity', 0.4);
+    // }, 12950);
+    //
+    // setTimeout(function() {
+    //   let result = confirm('Разрешить приложению отправлять вам уведомления?');
+    //
+    //   if (result == true) {
+    //     $('body').css('background', 'none');
+    //     $('body').css('opacity', 1);
+    //   } else {
+    //     $('body').css('background', 'none');
+    //     $('body').css('opacity', 1);
+    //   }
+    // }, 13000);
+
+
+    // <!-- Анимации появления номера на странице -->
+
+    $( ".containerBlock" ).accordion({
+      collapsible: true
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Эффект при нажатии кнопки вверх
+    $(".arrow").mousedown(function () {
+      $(".arrow").effect( "bounce", "slow" );
+      $(".arrow").css('transition', 'none');
+    });
+
+    $(".arrow").mouseup(function () {
+      setTimeout(function() {
+        $(".arrow").css('transition', '0.5s');
+      }, 1500);
+    });
+
+    // работа модального окна
+
+    $(document).on('click', '[data-toggle="modal"]', function () {
+      var target = $(this).attr('data-target');
+      $(target).addClass('show');
+      return false;
+    });
+
+    $('.modal .close').on('click', function () {
+      $(this).closest('.modal').removeClass('show');
+      return false;
+    });
+
+    $(document).on('click', '[data-toggle="modal2"]', function () {
+      var target = $(this).attr('data-target');
+      $(target).addClass('show');
+      return false;
+    });
+    $('.modal2 .close').on('click', function () {
+      $(this).closest('.modal2').removeClass('show');
+      return false;
+    });
+
+    $('.entry').on('click', function () {
+      $(this).closest('.modal2').removeClass('show');
+      $(document).on('click', '[data-toggle="modal"]', function () {
+        var target = $(this).attr('data-target');
+        $(target).addClass('show');
+        return false;
+      });
+    });
+
+  });
+
+  // проверка форм
+
+  function checkForm(){
+
+    // проверка на ввод в поле с именем только букв
+    var nameChoice = document.getElementById('userName').value;
+    var temlateName = /^[А-Яа-яЁё\s]/i;
+    // в случае не соответствия условия - выводится сообщение
+    if (!temlateName.test(nameChoice)) {
+      userName.setCustomValidity("Имя не корректно, должны быть только буквы!");
+      return false;
+    }
+
+    // проверка на ввод в поле с телефоном только цифр
+    var phoneChoice = document.getElementById('userPhone').value;
+    var templatePhone = /\d/;
+    // в случае не соответствия условия - выводится сообщение
+    if (!templatePhone.test(phoneChoice)) {
+      userPhone.setCustomValidity("В поле нужно ввести только цифры");
+      return false;
+    }
+
+    // проверка на ввод в поле с логином не только цифр, но и букв с учеом регистра
+    var nameLogin = document.getElementById('userLogin').value;
+    // в // обозначается шаблон, за ним - флаг
+    var templateLogNum = /[0-9]/;
+    var templateLogBig = /[А-ЯЁ]/;
+    var templateLogSmall = /[а-яё]/;
+    if (!templateLogNum.test(nameLogin)) {
+      // в случае не соответствия условия - выводится сообщение
+      userLogin.setCustomValidity("В логине должны быть обязательно цифры!");
+      return false;
+    }
+    if (!templateLogBig.test(nameLogin)) {
+      // в случае не соответствия условия - выводится сообщение
+      userLogin.setCustomValidity("В логине должны быть обязательно большие буквы!");
+      return false;
+    }
+    if (!templateLogSmall.test(nameLogin)) {
+      // в случае не соответствия условия - выводится сообщение
+      userLogin.setCustomValidity("В логине должны быть обязательно маленькие буквы!");
+      return false;
+    }
+
+    // проверка на ввод в поле пароля и его подтверждение: должен быть одинаков
+    var pas1 = document.getElementById('userPas1').value;
+    var pas2 = document.getElementById('userPas2').value;
+    if (pas1!=pas2) {
+      // в случае не соответствия условия - выводится сообщение
+      alert("Пароль не совпадает");
+      return false;
+    }
+
+    // проверка на ввод в поле с вопросами - текста, чтобы не отправлялись пустые формы
+    var nameText = document.getElementById("userText").value;
+    if(!nameText.length > 0) {
+      // в случае не соответствия условия - выводится сообщение
+      return false;
+    } return true;
+  }
+
+  // проверка на ввод в поле почты.
+  var email = document.getElementById('mail');
+  email.addEventListener("input", function(event) {
+    if(email.validity.typeMismatch) {
+      // в случае не соответствия условия - выводится сообщение
+      email.setCustomValidity("Не похоже на почту");
+    } else {
+      email.setCustomValidity("");
+    }
+  })
+
+
+  </script>
+</body>
+</html>
