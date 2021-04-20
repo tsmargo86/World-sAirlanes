@@ -1,0 +1,3066 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #ededed;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+/* Запуск страницы */
+
+#preloader {
+  overflow: hidden;
+  z-index: 100;
+}
+
+#splashScreen {
+  background: url('../img/sbase.ru-703.jpg');
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: fadeBg 7s ease 0s infinite alternate;
+}
+
+@keyframes fadeBg {
+  0%, 5% { opacity: 0; };
+}
+
+.preloader {
+  position: absolute;
+  left: 48%;
+  bottom: 10%;
+  width: 80px;
+  height: 80px;
+  background: url('../img/loader.gif') no-repeat 50% 50%;
+  background-size: 80px;
+}
+
+/* Г Л А В Н А Я   С Т Р А Н И Ц А */
+
+/* шапка главной страницы */
+
+.fullscreen-bg {
+    overflow: hidden;
+    z-index: -100;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 42%;
+    border-bottom: 10px solid rgb(16, 199, 166);
+    background-image: url('../img/banniere1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+.overlay {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.overlay h1 {
+    text-align: left;
+    color: #eeeeee;
+    font-size: 55px;
+    letter-spacing: 1.05vw;
+    margin-top: 20%;
+    margin-left: 9.7vw;
+    animation: myAnim1 1s linear alternate;
+}
+
+@keyframes myAnim1 {
+  from {
+    margin-left: -600px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+.overlay h2 {
+  text-align: left;
+  color: #eeeeee;
+  margin-left: 9.7vw;
+}
+
+.containerMenu {
+  width: 100%;
+  height: 130px;
+  margin: auto;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  padding-left: 9.7vw;
+  z-index: 10;
+  box-shadow: 310px 65px 67px -24px rgba(255, 255, 255, 0.55) inset;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 15.1vw;
+  width: 100%;
+
+}
+
+.menu-contact {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+#entrance, #checkIn {
+  background: none;
+  margin: 10px 0 15px 10px;
+  padding: 0 0 0 10px;
+  border: none;
+  color: rgb(0,255,255);
+  font-weight: bolder;
+  font-size: 17px;
+  -webkit-text-stroke: 0.3px black;
+}
+
+#menuToggle {
+  margin-right: 15px;
+  margin-left: -100px;
+}
+
+.main-menu {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.main-menu li {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+  height: 30px;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: block;
+  font-size: 17px;
+  padding: 5px;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.3px black;
+}
+
+.main-menu li a:hover {
+  border-bottom: 3px solid rgb(0,255,255);
+  color: rgb(186, 214, 206);
+}
+
+#entrance:hover, #checkIn:hover, #entrance:active, #checkIn:active {
+  color: rgb(12, 182, 152);
+  border: 2px solid rgb(0,255,255);
+  border: none;
+  -webkit-text-stroke: 0.3px black;
+  cursor: pointer;
+}
+
+#entrance:focus, #checkIn:focus {
+  outline: none;
+}
+
+.toogle-button, #menu-checkbox {
+  display: none;
+}
+
+.logo1 {
+  width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0 0 0;
+}
+
+.logo1:hover {
+  cursor: pointer;
+}
+
+.logo-img {
+  margin-left: 0;
+}
+
+.logo-img img {
+  width: 134px;
+  z-index: -1;
+  border-bottom: 10px solid rgb(0,255,255,0.7);
+  box-shadow: 4px -52px 28px -24px rgba(255, 255, 255, 0.79) inset;
+}
+
+.decorHeader {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.decorHeader #imgDecor1 {
+  width: 100%;
+  margin-top: 16vw;
+  position: static;
+}
+
+.decorHeader #imgDecor2 {
+  width: 100%;
+  margin-top: -45vw;
+  transform: scale(-1, 1);
+  position: static;
+}
+
+/* главный блок */
+
+.mainContainer {
+  background-color: #ededed;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.infoForUser {
+  border-bottom: 2px solid rgb(16, 199, 166);
+}
+
+.mainContainer {margin: 0;padding: 0;font-family: sans-serif;color: #262626;}
+
+section {
+  width: 100%;
+  height: 500px;
+  box-sizing: border-box;
+}
+
+section.sec1 {
+  background: url('../img/header-1.jpg') no-repeat center / cover;
+  background-attachment: fixed;
+}
+
+section.sec2 {
+  background: url('../img/header-2.jpg') no-repeat center / cover;
+  background-attachment: fixed;
+}
+
+section.sec3 {
+  background: url('../img/plane.jpg')no-repeat center / cover;
+  background-attachment: fixed;
+}
+
+section.sec4 {
+  background: url('../img/Istilah.jpg')no-repeat center / cover;
+  background-attachment: fixed;
+}
+
+section.sec5 {
+  background: url('../img/header-4.jpg')no-repeat center / cover;
+  background-attachment: fixed;
+}
+
+.sec-text {
+  padding: 8% 6% 8% 14.7%;
+  height: auto;
+  border-bottom: 2px solid rgb(16, 199, 166);
+  border-top: 2px solid rgb(16, 199, 166);
+}
+
+.heading {
+  background: url('../img/banniere.jpg') repeat center center;
+  background-size: contain;
+  opacity: 0.8;
+  text-align: right;
+  padding: 2em 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.sec-text h1 {
+  text-align: right;
+  font-size: 60px;
+  text-transform: uppercase;
+  animation: myAnim2 2.8s linear alternate;
+}
+
+@keyframes myAnim2 {
+  from {
+    margin-right: -1000px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}
+
+.sec-textContainer {
+  font-size: 1.3em;
+}
+
+/* описание содержимого основной страницы сайта */
+
+.aboutSite {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgb(81, 230, 203);
+  padding: 20px 8vw 4px 11vw;
+  margin-left: -15vw;
+}
+
+#sec-text1 {
+  border-right: 50px solid rgb(148, 226, 212);
+  background: url('../img/shadowBlock.png');
+  background-position: left;
+  background-position: 60vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: -100px -5px 74px -34px rgb(148, 226, 212) inset;
+}
+
+#sec-text2 {
+  border-left: 50px solid rgb(148, 226, 212);
+  background: url('../img/shadowBlock.png');
+  background-position: right;
+  background-position: -80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 100px -5px 74px -34px rgb(148, 226, 212) inset;
+}
+
+/* описание содержимого второй и четвертой страницы сайта */
+
+.num01, .num03 {
+  margin-top: -5vw;
+  font-size: 120px;
+  font-weight: 1000;
+  opacity: 0.5;
+  color: #ededed;
+  -webkit-text-stroke: 1px rgb(184, 184, 184);
+  margin-left: -170px;
+}
+
+.shapedRight {
+   height: 30vh;
+   width: 40vw;
+   float:right;
+   shape-outside: polygon(0 0, 100% 0, 100% 100%, 70% 100%);
+}
+
+.secLeft-textTitle {
+  color: rgb(15, 163, 136);
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: -100px;
+  padding-bottom: -50px;
+  position: absolute;
+  letter-spacing: 1vw;
+}
+
+/* описание содержимого третьей и пятой страницы сайта */
+
+.num02, .num04 {
+  margin-top: -5vw;
+  font-size: 120px;
+  font-weight: 1000;
+  opacity: 0.4;
+  color: #ededed;
+  -webkit-text-stroke: 1px rgb(184, 184, 184);
+  margin-left: 64vw;
+}
+
+.shapedLeft {
+   height: 50vh;
+   float: left;
+   shape-outside: polygon(0 0, 100% 0, 100% 10%, 0 100%);
+   margin-left: 35vw;
+}
+
+.secRight-textTitle {
+  width: auto;
+  height: 10px;
+  text-align: right;
+  color: rgb(15, 163, 136);
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: -100px 0 0 43%;
+  padding-bottom: -50px;
+  position: absolute;
+  letter-spacing: 1vw;
+}
+
+.awardsText:hover {
+  cursor: pointer;
+  font-size: 1.02em;
+}
+
+#aboutAirlaines1 img:hover, #aboutAirlaines2 img:hover, #aboutAirlaines3 img:hover {
+  cursor: pointer;
+  font-size: 1.02em;
+}
+
+/* футтер станицы */
+
+footer {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-color: rgb(227, 227, 227);
+  margin-top: -10px;
+  border-top: 10px solid rgb(16, 199, 166);
+}
+
+.footerContainer {
+  position: relative;
+  opacity: 0.99;
+  width: 100%;
+  height: 500px;
+}
+
+.footerContainer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+  background: url('../img/mapFooter.png');
+}
+
+.decorFooter {
+  width: 100%;
+  position: absolute;
+}
+
+.decorFooter #imgDecor1 {
+  width: 100%;
+  margin-top: -23vw;
+  position: static;
+  transform: scale(-1, 1);
+}
+
+.decorFooter #imgDecor2 {
+  width: 40%;
+  margin-top: -32.5vw;
+  float: right;
+  position: static;
+  opacity: 0.95;
+}
+
+.socialIcons {
+  width: 27.3vw;
+  list-style: none;
+  display: inline-block;
+  height: 100%;
+  text-align: left;
+  padding-right: 5vw;
+  margin: 0;
+}
+
+.socialIcons li {
+  display: inline-block;
+  margin: auto 0.5vw;
+}
+
+.socialIcons li a {
+  text-align: right;
+  display: inline-block;
+  font-size: 2.5rem;
+  height: 80px;
+  width: 70px;
+  line-height: 100px;
+  color: #fff5b2;
+  transition: all .5s ease;
+  transform-origin: left;
+  transform: rotateY(-30deg);
+  text-shadow: 10px 0px 1px #1a1a1a, 10px 0px 1px #070707, 10px 0px 1px black, 10px 0px 1px black;
+}
+
+.socialIcons li a:hover {
+  color: #1a1a1a;
+  transform: rotate(0deg);
+  text-shadow: 0px 0px 1px #1a1a1a, 0px 0px 1px #070707, 0px 0px 1px black, 0px 0px 1px black;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 330px;
+}
+
+.points, .network {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.points .logo1 {
+  width: 100%;
+  height: 50px;
+  padding-top: 50px;
+}
+
+.point, .pointNumber, .point a {
+  font-weight: 600;
+  margin: 0.8vw auto 0 4vw;
+  width: 100%;
+  height: 3.3vh;
+}
+
+.point a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  margin-left: 0;
+}
+
+.point:hover, .point a:hover {
+  text-decoration: underline;
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+.points .logo1 img {
+  width: 18vh;
+  margin: 0 auto 0 9.3vw;
+}
+
+.pointsName {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto 0 5.7vw;
+  z-index: 1;
+}
+
+.network {
+  width: 70vw;
+  justify-content: flex-end;
+}
+
+.network-icon {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.network-text {
+  width: 18vw;
+  text-align: left;
+  margin-top: 7vh;
+  font-size: 19px;
+  margin-left: 6vw;
+}
+
+hr {
+  margin-top: 10px;
+}
+
+.awards {
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 3vw;
+  margin: 0;
+  box-shadow: -5px 6px 96px 36px rgba(114, 114, 114, 0.3) inset;
+}
+
+.logo2 {
+  margin-top: 3vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.logo2 img {
+  width: 100%;
+}
+
+.awardsText {
+  margin-top: 1vh;
+  text-align: center;
+}
+
+.arrow {
+  width: 55px;
+  display: block;
+  background-size: 100%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  animation: pulse 2s linear infinite;
+  transition: 0.5s;
+  border-radius: 30%;
+}
+
+.arrow img {
+  width: 100%;
+  animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.arrow img:hover {
+  transform: rotateY(180deg);
+  animation: none;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+
+
+
+
+
+
+/* С Т Р А Н И Ц А   П А С С А Ж И Р А М*/
+
+.infoForUser h1 {
+  margin: 22vh 4.5vw 5vw 10vw;
+  text-transform: uppercase;
+}
+
+.infoForUser p {
+  margin: 5vw 5.5vw 10vh 10vw;
+}
+
+.pasport, .aboutViza, .aboutBag, .aboutHotels, .aboutCoordinates {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3vw;
+}
+
+.aboutViza, .aboutBag {
+  background: rgb(212, 212, 212);
+  padding-bottom: 3vw;
+}
+
+.aboutBag .tourist {
+  width: 100%;
+  margin: 0 2vw 0 10vw;
+}
+.pasport .tourist {
+  width: 100%;
+  margin: 6vw 2vw 0 10vw;
+}
+
+.aboutViza .tourist, .aboutHotels .tourist {
+  width: 100%;
+  height: auto;
+  margin: 9vw 5.3vw 0 0;
+}
+
+.pasport img {
+  width: 33vw;
+}
+
+.aboutViza img {
+  width: 34vw;
+}
+
+.infoBag, .infoCoordinates {
+  margin: 10vh 5.5vw 12vh 5vw;
+}
+
+.aboutDocumets {
+  margin: 16vh 5.5vw 12vh 5vw;
+}
+
+.infoBag {
+  background: url('../img/bigBag.png');
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 12vw;
+}
+
+.aboutVizaText {
+  margin: 14vw 8vw 12vh 9.8vw;
+}
+
+.aboutHotelsText {
+  margin: 0 8vw 12vh 9.8vw;
+}
+
+.aboutVizaText p:last-child {
+  margin-top: 3vw;
+}
+
+.aboutDocumets h2, .aboutVizaText h2, .aboutBaggage h2, .infoBag h2, .aboutHotelsText h2 {
+  text-align: center;
+  margin-bottom: 5vw;
+  text-transform: uppercase;
+}
+
+.decorBlock1 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+ .decorBlock1 #imgDecor1 {
+  width: 100%;
+  margin-top: -23.5vw;
+  position: static;
+}
+
+.decorBlock1 #imgDecor2 {
+  width: 100%;
+  margin-top: -47vw;
+  transform: scale(-1, 1);
+  position: static;
+}
+
+.boton {
+  width: 200px;
+  height: 50px;
+  display: block;
+  position: relative;
+}
+
+.botontext {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+ .twist {
+  display: block;
+  height: 100%;
+  width: 25%;
+  position: relative;
+  float: left;
+  margin-left: -4px;
+}
+
+ .twist:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  bottom: 100%;
+  position: absolute;
+  transform-origin: center bottom 0px;
+  transform: matrix3d(1, 0, 0, 0,
+                      0, 0, -1, -0.003,
+                      0, 1, 0, 0,
+                      0, 0, 0, 1);
+  -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+.twist:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  height: 100%;
+  background: #262626;
+  transform-origin: center top 0px;
+  transform: matrix3d(1, 0, 0, 0,
+                      0, 1, 0, 0,
+                      0, 0, 1, -0.003,
+                      0, -50, 0, 1);
+  -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.boton:hover .twist:before {
+  background: rgb(81, 230, 203);
+  transform: matrix3d(1, 0, 0, 0,
+                      0, 1, 0, 0,
+                      0, 0, 1, 0.003,
+                      0, 50, 0, 1);
+}
+
+.boton:hover .twist:after {
+  background: #ededed;
+  transform: matrix3d(1, 0, 0, 0,
+                      0, 0, -1, 0.003,
+                      0, 1, 0, 0,
+                      0, 0, 0, 1);
+}
+
+.boton .twist:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.boton .twist:nth-of-type(1):before, .boton .twist:nth-of-type(1):after {
+  transition-delay: 0s;
+}
+
+.boton .twist:nth-of-type(2):before, .boton .twist:nth-of-type(2):after {
+  transition-delay: 0.1s;
+}
+
+.boton .twist:nth-of-type(3):before, .boton .twist:nth-of-type(3):after {
+  transition-delay: 0.2s;
+}
+
+.boton .twist:nth-of-type(4):before, .boton .twist:nth-of-type(4):after {
+  transition-delay: 0.3s;
+}
+
+.boton .botontext:nth-of-type(1) {
+  color: #3d3b40;
+  bottom: 100%;
+  transform-origin: center bottom 0px;
+  transform: matrix3d(1, 0, 0, 0,
+                      0, 0, -1, -0.003,
+                      0, 1, 0, 0,
+                      0, 0, 0, 1);
+  -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+.boton:hover .botontext:nth-of-type(1) {
+  transform: matrix3d(1, 0, 0, 0,
+                      0, 1, 0, 0,
+                      0, 0, 1, 0.003,
+                      0, 50, 0, 1);
+}
+
+.boton .botontext:nth-of-type(2) {
+  color: #fff;
+  top: 100%;
+  transform-origin: center top 0px;
+  transform: matrix3d(1, 0, 0, 0,
+                      0, 1, 0, 0,
+                      0, 0, 1, -0.003,
+                      0, -50, 0, 1);
+  -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+  .boton:hover .botontext:nth-of-type(2) {
+    transform: matrix3d(1, 0, 0, 0,
+                        0, 0, -1, 0.003,
+                        0, 1, 0, 0,
+                        0, 0, 0, 1);
+}
+
+.decorBlock2 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+ .decorBlock2 #imgDecor1 {
+  width: 100%;
+  margin-top: -27.5vw;
+  position: static;
+}
+
+.decorBlock2 #imgDecor2 {
+  width: 100%;
+  margin-top: -42vw;
+  transform: scale(-1, 1);
+  position: static;
+}
+
+.baggage {
+  padding-top: 5vw;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.baggage {
+  background-image: url('../img/image-belt.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+.baggageMove {
+  animation: myAnim3 300s linear infinite;
+  animation: myAnim3 backwards 10s;
+  padding-top: 5vw;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url('../img/image-belt.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+@keyframes myAnim3 {
+  from {
+    background-position: 50% 100%;
+  }
+  to {
+    background-position: -700% 100%;
+  }
+}
+
+.aboutBaggage {
+  text-align: center;
+  width: 80%;
+  margin: 7vw 8vw 0 9.8vw;
+}
+
+.bag {
+  width: 120%;
+}
+
+.baggage img {
+  width: 100%;
+}
+
+#bag {
+  margin-left: -95vw;
+}
+
+.aboutBag {
+  padding-top: 5vw;
+  box-shadow: 300px 3px 55px -21px rgb(212, 212, 212, 1) inset;
+}
+
+.aboutBag img {
+  width: 15vw;
+  margin-top: 7vw;
+  margin-left: 3vw;
+}
+
+.aboutBag .tourist::before {
+  content: "";
+  background: url("../img/empty-airport.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 40vw;
+  z-index: -1;
+  box-shadow: 20px 10px 40px 40px rgb(212, 212, 212, 1) inset;
+}
+
+.aboutBag .tourist {
+  position: relative;
+  opacity: 0.99;
+  width: 100%;
+}
+
+.infoBag p {
+  margin-bottom: 3vw;
+}
+
+.infoBag p:last-child {
+  margin-left: 16vw;
+}
+
+.aboutHotels .tourist img {
+  width: 52vw;
+}
+
+.aboutHotelsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#flyIn {
+  width: 20vw;
+  margin-top: 5vw;
+  margin-left: -22vw;
+}
+
+.airplaneFly {
+  width: 350%;
+  height: 18vw;
+  margin-left: -5vw;
+  display: inline-block;
+  position: relative;
+  transition:.2s;
+}
+
+.airplaneFly:after {
+  top: 26px;
+  left: 0px;
+}
+
+.air {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: myAnim4 5s infinite;
+  animation: myAnim4 backwards 5s;
+  width: 20vw;
+  margin-top: 5vw;
+  margin-left: -22vw;
+}
+
+@keyframes myAnim4 {
+  from {
+    left: 0%;
+    bottom: -50%;
+  }
+  to {
+    left: 120vw;
+    bottom: 30vh;
+  }
+}
+
+.blockEnd {
+  width: 100%;
+  height: 45vw;
+  background-image: url('../img/Air-Travel.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: -1vw;
+  box-shadow: -200px -26px 84px 42px rgba(255, 255, 255, 1) inset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.blockEndInfo {
+  background-color: rgb(224, 224, 224, 0.6);
+  width: 50%;
+  height: 40%;
+  margin-left: 40vw;
+  border-radius: 20px;
+  box-shadow: -100px 0 54px 22px rgba(255, 255, 255, 1) inset;
+  box-shadow: -32px 2px 45px 12px rgba(0, 0, 0, 0.4);
+  z-index: 200;
+}
+
+.blockEndInfo p {
+  margin: 3vw;
+}
+
+.review {
+  font-size: 1.3rem;
+}
+
+.review:hover {
+  cursor: pointer;
+  font-size: 1.35rem;
+  color: rgb(57, 166, 146);
+  text-decoration: underline;
+}
+
+
+
+/* С Т Р А Н И Ц А  Н А П Р А В Л Е Н И Я */
+
+.weather {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3vw;
+  margin-bottom: 8vw;
+}
+
+.weather .tourist {
+    width: 100%;
+    height: auto;
+    margin: 9vw 5.3vw 0 0;
+}
+.weather p {
+    font-size: 1.7vw;
+}
+
+.flyMap {
+  width: 600vw;
+  height: 43vw;
+  margin: 4vw 5.3vw 6vw 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.folded {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 30vw;
+  height: 20vw;
+  display: flex;
+  z-index: 1;
+}
+.folded-itm {
+  list-style: none;
+  width: 25%;
+  background: url('../img/mapCoordin.png');
+  background-size: cover;
+  height: 100%;
+  transition: 0.5s;
+}
+.folded:hover .folded-itm:nth-child(odd) {
+  transform: skewY(15deg);
+  box-shadow: inset 20px 0 50px rgba(0,0,0, .5);
+}
+.folded:hover .folded-itm:nth-child(even) {
+  transform: skewY(-15deg);
+  box-shadow: inset 20px 0 50px rgba(0,0,0, .5);
+}
+
+.folded .folded-itm:nth-child(1) {
+  background-position: 0;
+}
+.folded .folded-itm:nth-child(2) {
+  background-position: -7.5vw;
+}
+.folded .folded-itm:nth-child(3) {
+  background-position: -15vw;
+}
+.folded .folded-itm:nth-child(4) {
+  background-position: -22.5vw;
+}
+
+.aboutMap {
+  margin: 5vw 8vw 3vw 9.8vw;
+  position: relative;
+  opacity: 0.99;
+}
+
+.aboutMap::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  background: url('../img/сетка.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.aboutMap h2, .aboutWeather h2 {
+  text-align: center;
+  margin-bottom: 5vw;
+  text-transform: uppercase;
+}
+
+.aboutWeather {
+  margin: 30vh 4.9vw 0 9.8vw;
+  width: 100%;
+  position: relative;
+  opacity: 0.99;
+}
+
+.aboutWeather::before {
+  content: '';
+  position: absolute;
+  background: url('../img/weather.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+#block {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(167, 167, 167);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#search {
+  background-color: rgb(89, 89, 89);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: #fff;
+  padding: 1vw 2vw;
+  font-size: 1.3vw;
+}
+
+#nameBlock {
+  width: 28.2vw;
+  margin-top: 0.4vw;
+}
+
+#choise {
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+#clickButton {
+  width: 2vw;
+  height: 2vw;
+}
+
+#clickButton img {
+  width: 65%;
+  height: 65%;
+  margin-bottom: -0.35vw;
+}
+
+#clickButton:hover {
+  cursor: pointer;
+}
+
+#cityName {
+  background-color: rgb(208, 247, 245);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: rgb(19, 255, 234);
+  width: 13.3vw;
+  float: right;
+  margin-right: -2.8vw;
+  height: 1.3vw;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+}
+
+#cityName:focus {
+  outline: none;
+}
+
+#weatherCity, #weatherHourly {
+  margin: 1vw 2vw 1vw 2vw;
+  width: 43vw;
+  height: 15vw;
+  background-color: rgb(208, 247, 245);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#infoWeatherCity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 2vw;
+}
+
+#city, #dataToday {
+  width: 10vw;
+  height: 100%;
+  color: rgb(8, 57, 54);
+  margin: 0.5vw;
+  text-transform: capitalize;
+}
+
+#city {
+  font-size: 1.4vw;
+  padding-left: 1vw;
+}
+
+#dataToday {
+  text-align: right;
+  font-size: 1.1vw;
+  padding-right: 0.5vw;
+}
+
+#hourly {
+  width: 39vw;
+  height: 3vw;
+  color: rgb(6, 60, 56);
+  margin: 0.8vw 1vw 0 1vw;
+  font-size: 1.5vw;
+}
+
+#infoToday {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#weather, #temperatureToday, #aboutTemperature {
+  width: 10vw;
+  height: 10vw;
+  margin-bottom: 0.7vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  padding-top: 0.7vw;
+}
+
+#temperatureToday {
+  padding-left: 2vw;
+  padding-top: 2vw;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+#aboutTemperature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1vw;
+}
+
+#infoWeatherHourly {
+  width: 100%;
+  height: 100%;
+  margin: 0.8vw;
+  font-size: 1vw;
+  text-align: left;
+}
+
+#maxTemperature, #minTemperature {
+  margin-left: 0;
+}
+
+th {
+  width: 6vw;
+  height: 1.5vw;
+}
+
+th:first-child {
+  width: 7vw;
+}
+
+td {
+  height: 1vw;
+  padding: 0;
+}
+
+.weather .tourist img {
+  height: 8vw;
+  width: 8vw;
+}
+
+#descriptionImg {
+  padding-left: 4vw;
+  height: 100%;
+}
+
+#descriptionImg img, #img1, #img2, #img3, #img4, #img5, #img6 {
+  background: rgb(167, 167, 167);
+}
+
+#img1 img, #img2 img, #img3 img, #img4 img, #img5 img, #img6 img {
+  height: 3vw;
+  width: 3vw;
+}
+
+#descriptionText {
+  font-size: 1.2vw;
+}
+
+#row1 {
+  height: 2.5vw;
+}
+
+.decorBlock3 {
+  width: 100%;
+  position: absolute;
+}
+
+.decorBlock3 #imgDecor1 {
+  width: 100%;
+  margin-top: -23vw;
+  position: static;
+  transform: scale(-1, 1);
+}
+
+.decorBlock3 #imgDecor2 {
+  width: 100%;
+  margin-top: -46vw;
+  float: right;
+  position: static;
+  opacity: 0.95;
+}
+
+.aboutCoordinates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgb(231, 231, 231);
+}
+
+.aboutCoordinates .tourist {
+  margin-top: 12vw;
+  margin-bottom: 6vw;
+}
+
+.infoCoordinates {
+  margin-top: 17vw;
+}
+
+.aboutCoordinates .tourist {
+  margin-left: 9vw;
+}
+
+.aboutCoordinates .tourist img {
+  width: 100%;
+}
+
+.blockEnd2 {
+  width: 100%;
+  height: 45vw;
+  background-image: url('../img/digital-aviation.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -5vw;
+  box-shadow: -6px 80px 42px -27px rgb(231, 231, 231, 1) inset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.blockEndInfo2 {
+  background-color: rgb(224, 224, 224, 0.1);
+  width: 34%;
+  height: 18%;
+  margin-left: 56vw;
+  border-radius: 10px;
+  box-shadow: -32px 2px 45px 12px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  color: #fff;
+  padding: 2%;
+  font-weight: bold;
+}
+
+.blockEndInfo2 p:first-child {
+  margin-bottom: 2vw;
+}
+
+.modal, .modal2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal.show, .modal2.show {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 5vw;
+}
+
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 0.3vw solid rgba(0, 0, 0, .2);
+  border-radius: 0.4rem;
+  outline: 0;
+  width: 30vw;
+  color: rgb(0, 0, 0);
+  font-size: 1.1vw;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: right;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5vw;
+  margin: 0;
+  padding: 1vw 2vw 0 2vw;
+  border-bottom: 1px solid #eceeef;
+}
+
+.modal-title {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 2vw;
+  line-height: 4;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  margin: -5vw 0 0 0;
+}
+
+.close:focus, .close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+#colorInfo {
+  font-size: 0.9vw;
+  text-align: center;
+  color: rgb(230, 107, 47);
+  padding: 0 2vw;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+#regForm {
+  width: 30vw;
+  height: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vw;
+  padding-top: 2vw;
+}
+
+#userName, #button, #contact {
+  width: 23vw;
+}
+
+#mail, #userPhone {
+  width: 9vw;
+  padding-left: 0.5vw;
+}
+
+#userName {
+  padding-left: 0.5vw;
+}
+
+#userPhone {
+  margin-right: 0.5vw;
+}
+
+#mail {
+  margin-left: 0.5vw;
+}
+
+#userText {
+  padding: 0.3vw 0.5vw;
+}
+
+#userName, #mail, #userPhone {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+#userPas1 {
+  width: 75%;
+  /* margin-left: 1%; */
+}
+
+#userText, #userName, #userPhone, #mail, #userLogin, #userPas1:focus {
+  outline: none;
+}
+
+#button {
+  background-color: rgb(88, 88, 88);
+  height: 2.8vw;
+  border-radius: 0.3vw;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.entry {
+  text-decoration: none;
+  color: rgb(50, 121, 106);
+}
+
+input:invalid {
+  border-color: rgb(230, 107, 47);
+}
+
+input:valid {
+  border-color: rgb(67, 171, 149);
+}
+
+
+/* С Т Р А Н И Ц А   А В И А К О М П А Н И И */
+
+.airlaines {
+  background: url('../img/seats.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2vw 4.1vw 12vw 9.7vw;
+  z-index: 2;
+}
+
+.containerBlock {
+  width: 70%;
+}
+
+.airlainesInfo {
+  width: 100%;
+}
+
+.logoText {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contImg {
+  width: 25vw;
+  height: 15vw;
+  margin: 0 3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contText {
+  margin: 2vw 2vw 2vw 0;
+  width: 55vw;
+}
+
+.ui-accordion .ui-accordion-content {
+  margin: 0 1vw 2vw 2.5vw;
+  height: 40vw;
+  font-size: 2.2vh;
+  width: 100%;
+  height: 60vh;
+}
+
+.ui-accordion .ui-accordion-header {
+  width: 75vw;
+}
+
+.port-plane {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 1.5vw 0;
+}
+
+.info-range, .port-map {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-range {
+  font-size: 4vw;
+  color: rgb(31, 246, 207);
+  -webkit-text-stroke: 1px rgb(184, 184, 184);
+  margin-bottom: 3vw;
+}
+
+.text-range, .port-map p {
+  margin-top: 2vw;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.blockEndInfo p {
+  font-size: 1.5vw;
+}
+
+.blockEndInfo2 p:first-child {
+  font-size: 2vw;
+}
+
+.blockEndInfo2 {
+  height: 40%;
+}
+
+.review {
+  font-size: 2.2vw;
+}
+
+.blockEndInfo2 .review a {
+  color: white;
+}
+
+.blockEndInfo .review a {
+  color: black;
+}
+
+.review:hover {
+  font-size: 1.8vw;
+  height: 2.3vw;
+}
+
+.blockEndInfo2 .review a:hover, .blockEndInfo .review a:hover {
+  color: rgb(99, 227, 215);
+}
+
+.newUserNick {
+  width: 100%;
+}
+
+#newReview {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+#buttonReview {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  font-size: 1.8vw;
+}
+
+
+
+
+
+@media screen and (min-width:900px) and (max-width:1200px) {
+
+  .menu-contact {
+    margin-right: -1vw;
+  }
+
+  .main-menu li {
+    margin-right: 1vw;
+
+  }
+
+  .main-menu li a {
+    font-size: 1.3vw;
+  }
+
+  #entrance, #checkIn {
+    font-size: 1.4vw;
+  }
+
+  .overlay h1 {
+    margin-top: 25vh;
+    font-size: 5vw;
+  }
+
+  .sec-text {
+    padding-right: 4%;
+  }
+
+  .sec-text h1 {
+    font-size: 9vh;
+  }
+
+  .sec-textContainer {
+    font-size: 3.2vh;
+  }
+
+  .secRight-textTitle {
+    margin-left: 34vw;
+  }
+
+  .secRight-textTitle, .secLeft-textTitle {
+    font-size: 3vw;
+    margin-top: -80px;
+  }
+
+  .num01, .num03, .num02, .num04 {
+    font-size: 10vw;
+  }
+
+  .socialIcons {
+    padding: 0;
+    width: 32vw;
+    padding-left: 15vh;
+  }
+
+  .socialIcons li a {
+    width: 10%;
+    font-size: 2.1rem;
+  }
+
+  .socialIcons li {
+    width: 4vw;
+    height: 4vh;
+  }
+
+  .network {
+    width: 58vw;
+  }
+
+  .network-text {
+    width: 22vw;
+    font-size: 1.5vw;
+    margin-left: 1vw;
+  }
+
+  footer {
+    font-size: 1.5vw;
+  }
+
+  .arrow img {
+    width: 90%;
+  }
+
+  .infoBag {
+    background: none;
+  }
+
+  .infoBag p, .aboutViza p, .decorBlock2 p, .pasport p, .infoForUser p, .aboutHotels p {
+    font-size: 1.7vw;
+  }
+
+  .infoBag p:last-child {
+    margin-left: 0;
+  }
+
+  .blockEndInfo p {
+    font-size: 1.5vw;
+  }
+
+  .aboutBaggage {
+    margin-top: 3vw;
+  }
+
+  .modal-content {
+    -webkit-box-shadow: 0 1vw 10vw rgba(0, 0, 0, .5);
+    box-shadow: 0 1vw 10vw rgba(0, 0, 0, .5);
+  }
+
+  .blockEndInfo p {
+    font-size: 1.5vw;
+  }
+
+  .blockEndInfo2 p:first-child {
+    font-size: 2vw;
+  }
+
+  .blockEndInfo2 {
+    height: 40%;
+  }
+
+  .review {
+    font-size: 2.2vw;
+  }
+
+  .blockEndInfo2 .review a {
+    color: white;
+  }
+
+  .blockEndInfo .review a {
+    color: black;
+  }
+
+  .review:hover {
+    font-size: 1.8vw;
+    height: 2.4vw;
+  }
+
+  .blockEndInfo2 .review a:hover, .blockEndInfo .review a:hover {
+    color: rgb(99, 227, 215);
+  }
+
+  #blockText h4 {
+      width: 100%;
+      margin-left: 1vw;
+      padding-left: 10vw;
+  }
+
+  #userNick {
+    padding-left: 2.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .newUserNick {
+    width: 100%;
+  }
+
+  #newReview {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+
+  #buttonReview {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    font-size: 1.8vw;
+  }
+
+}
+
+
+
+@media screen and (min-width:576px) and (max-width:900px) {
+
+  .containerMenu {
+    height: 100px;
+  }
+
+  .activeCSS {
+    border: none;
+    border-bottom: none;
+    color: rgb(0,255,255);
+   box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+  }
+
+  .menu {
+    margin-right: 12vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .menu-contact {
+    width: auto;
+    margin-left: 25vw;
+    margin-top: 0;
+  }
+
+  #entrance, #checkIn {
+    font-size: 2vw;
+    margin-left: 3.5vw;
+  }
+
+  .main-menu {
+    margin-top: 2px;
+    padding-top: 5px;
+    display: none;
+    position: fixed;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    top: 100px;
+    bottom: 0;
+    right: 0;
+    width: 210px;
+    height: 25vw;
+  }
+
+  .main-menu li {
+    height: 4vw;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-right: 2vw;
+  }
+
+   .main-menu li a {
+     width: 100%;
+     text-align: right;
+     padding-right: 0;
+     font-size: 1.9vw;
+   }
+
+   .main-menu li a:hover {
+     border: none;
+     color: rgb(0,255,255);
+    box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+   }
+
+  .logo-img img {
+    width: 104px;
+  }
+
+  #menuToggle {
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menuToggle input {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  #menuToggle span{
+    width: 5vw;
+    height: 0.3vw;
+    margin-bottom: 10px;
+    background: rgb(0,255,255);
+    border-radius: 2px;
+    -webkit-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    -moz-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    -ms-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    -o-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    transition: all .5s cubic-bezier(.08,.81,.87,.71);
+  }
+
+  #span1 {
+    transform-origin: 0.9vw 0px;
+  }
+
+  #span3 {
+    transform-origin: bottom right;
+  }
+
+  #menuToggle input:checked ~ #span1 {
+    background-color: rgb(12, 182, 152);
+    transform: rotate(45deg) translate(9px);
+  }
+
+  #menuToggle input:checked ~ #span2 {
+    background-color: rgb(12, 182, 152);
+    transform: rotate(495deg) translate(3px);
+  }
+  #menuToggle input:checked ~ #span3 {
+    background-color: rgb(12, 182, 152);
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  #menuToggle input:checked + nav .main-menu {
+    display: block;
+  }
+
+  .mainContainer h1 {
+    margin-top: 18vh;
+    font-size: 5vw;
+  }
+
+  #heading {
+    margin-top: 0;
+    font-size: 5vw;
+  }
+
+  .sec-text h1 {
+    font-size: 5vh;
+  }
+
+  .overlay h1 {
+    margin-top: 18vw;
+    font-size: 5.5vw;
+    margin-bottom: 0;
+  }
+
+  .overlay h2, .mainContainer h2 {
+    font-size: 3vw;
+    margin-top: -4.5vw;
+  }
+
+  .sec-textContainer {
+    font-size: 2.5vh;
+  }
+
+  .secRight-textTitle {
+    margin-left: 34vw;
+  }
+
+  .sec-text {
+    padding-left: 10%;
+    padding-right: 4%;
+  }
+
+  .aboutSite {
+    padding-left: 15vw;
+    padding-top: 1.5vw;
+    font-size: 2.8vw;
+  }
+
+  section {
+    height: 70vw;
+  }
+
+  .secRight-textTitle, .secLeft-textTitle {
+    font-size: 2.7vw;
+    margin-top: -8vw;
+    padding-left: 4vw;
+  }
+
+  .num01, .num03, .num02, .num04 {
+    font-size: 10vw;
+  }
+
+  .num01, .num03 {
+    padding-left: 4.5vw;
+  }
+
+  .socialIcons {
+    padding: 0 0 0 24vw;
+    width: 32vw;
+  }
+
+  .socialIcons li a {
+    width: 10%;
+    font-size: 1.9rem;
+  }
+
+  .socialIcons li {
+    width: 4vw;
+    height: 4vh;
+  }
+
+  .info {
+    height:30vw;
+  }
+
+  footer, .footerContainer {
+    height: 31.5vw;
+    font-size: 1.9vw;
+  }
+
+  .network {
+    width: 58vw;
+    height: 80%;
+  }
+
+  .network-text {
+    display: none;
+  }
+
+  .points {
+    height: 30%;
+  }
+
+  .points .logo1 {
+    margin: 4vw;
+    padding: 0;
+  }
+
+  .points .logo1 img {
+    width: 30%;
+  }
+
+  .point, .pointNumber {
+    margin-top: 0.2vw;
+    height: 3vw;
+  }
+
+  .pointsName {
+    margin-top: -3.5vw;
+    font-size: 1.7vw;
+  }
+
+  .arrow img {
+    width: 80%;
+  }
+
+  .logo2 img {
+    margin-left: 2vw;
+    width: 70%;
+  }
+
+  .infoBag {
+    background: none;
+    margin-top: 5vw;
+  }
+
+  .infoBag p, .aboutViza p, .decorBlock2 p, .pasport p, .infoForUser p, .aboutHotels p {
+    font-size: 2vw;
+  }
+
+  .infoBag p:last-child {
+    margin-left: 0;
+  }
+
+  .blockEndInfo p {
+    font-size: 1.5vw;
+  }
+
+  .blockEndInfo2 p:first-child {
+    font-size: 2vw;
+  }
+
+  .blockEndInfo2 {
+    height: 40%;
+  }
+
+  .review {
+    font-size: 2.2vw;
+  }
+
+  .blockEndInfo2 .review a {
+    color: white;
+  }
+
+  .blockEndInfo .review a {
+    color: black;
+  }
+
+  .review:hover {
+    font-size: 2.3vw;
+    height: 2.5vw;
+  }
+
+  .blockEndInfo2 .review a:hover, .blockEndInfo .review a:hover {
+    color: rgb(99, 227, 215);
+  }
+
+
+  .aboutBaggage {
+    margin-top: 3vw;
+  }
+
+  .modal-content {
+    -webkit-box-shadow: 0 1vw 120vw rgba(0, 0, 0, .5);
+    box-shadow: 0 1vw 10vw rgba(0, 0, 0, .5);
+  }
+
+  .modal-dialog {
+    margin: 25vw auto;
+  }
+
+  .modal-content {
+    width: 40vw;
+    height: 60vw;
+    font-size: 1.8vw;
+  }
+
+  #regForm {
+    width: 36vw;
+    height: 40vw;
+    padding-top: 2vw;
+  }
+
+  #userText {
+    width: 80%;
+    margin: 0.5vw 0;
+  }
+
+  #button {
+    width: 80%;
+    height: 4vw;
+    font-size: 1em;
+    margin: 0.5vw 0;
+  }
+
+  #colorInfo {
+    font-size: 1.4vw;
+  }
+
+  #contact, #userName {
+    width: 30vw;
+    margin: 0.5vw 0;
+  }
+
+  #userPhone, #mail {
+    width: 12vw;
+  }
+
+  #userPhone {
+    margin-left: 0;
+  }
+
+  #mail {
+    margin-right: 0;
+  }
+
+  .close {
+    font-size: 4vw;
+  }
+
+  #contact div {
+    margin: 0 1.5vw;
+  }
+
+  .modal-dialog {
+    margin: 5vw auto;
+  }
+
+  #blockText h4 {
+      width: 100%;
+      margin-left: 1vw;
+      padding-left: 10vw;
+  }
+
+  #userNick {
+    padding-left: 5.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .newUserNick {
+    width: 100%;
+  }
+
+  #newReview {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+
+  #buttonReview {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    font-size: 2.4vw;
+  }
+
+}
+
+
+
+@media screen and (max-width:576px) {
+
+  .containerMenu {
+    height: 50px;
+  }
+
+  .activeCSS {
+    border: none;
+    border-bottom: none;
+    color: rgb(0,255,255);
+   box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+  }
+
+  .menu {
+    margin-right: 12vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .menu-contact {
+    width: auto;
+    margin-left: 5vw;
+    margin-top: 1.5vw;
+  }
+
+  #entrance, #checkIn {
+    font-size: 2.9vw;
+    margin-top: 3.5vw;
+    font-size: 2.1vh;
+    margin-right: 2vw;
+    margin-left: 0;
+  }
+
+
+  br {
+    display: none;
+  }
+
+  .main-menu {
+    margin-top: 2px;
+    padding-top: 5px;
+    display: none;
+    position: fixed;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    top: 50px;
+    bottom: 0;
+    right: 0;
+    width: 210px;
+    height: 40vw;
+  }
+
+   .main-menu li a:hover {
+     border: none;
+     color: rgb(0,255,255);
+    box-shadow: 11px -7px 11px 3px rgba(255, 255, 255, 0.2) inset;
+   }
+
+  .logo-img img {
+    width: 104px;
+    border-bottom: 2px solid rgb(0,255,255,0.7);
+    width: 48px;
+  }
+
+  #splashScreen {
+    background-size: 340%;
+    background-position: center;
+  }
+
+  .preloader {
+    left: 39%;
+  }
+
+  .fullscreen-bg__video {
+      display: none;
+  }
+
+  .fullscreen-bg {
+    height: 176vw;
+    background-position: right;
+    padding-top: 0;
+    background-image: url('../img/klipart.png');
+  }
+
+  .overlay {
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+  }
+
+  .decorHeader {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .decorHeader #imgDecor1 {
+    width: 100%;
+    margin-top: 145vw;
+    position: static;
+  }
+
+  .decorHeader #imgDecor2 {
+    width: 100%;
+    margin-top: -45vw;
+    transform: scale(-1, 1);
+    position: static;
+  }
+
+  .overlay h1 {
+    margin-top: 18vh;
+    font-size: 8vw;
+    margin-left: 18vw;
+  }
+
+  .overlay h2 {
+    font-size: 5vw;
+    margin-top: 0;
+    margin-left: 18vw;
+  }
+
+  .sec-text {
+    padding-right: 6%;
+}
+
+.point, .pointNumber {
+  height: 2.8vh;
+  margin-top: 0.2vw;
+  margin-left: 2vw;
+}
+
+
+.main-menu li a {
+    width: 100%;
+    text-align: right;
+    padding-right: 0;
+    font-size: 2vh;
+}
+
+.main-menu li {
+    height: 7.5vw;
+    display: block;
+    width: 100%;
+    margin-right: 2vw;
+  }
+
+  #menuToggle {
+    overflow: hidden;
+    width: 7vh;
+    height: 8vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+  }
+
+  #menuToggle input {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  #menuToggle span{
+    width: 5vw;
+    height: 0.3vw;
+    margin-bottom: 10px;
+    background: rgb(0,255,255);
+    border-radius: 2px;
+    -webkit-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    -moz-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    -ms-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    -o-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    transition: all .5s cubic-bezier(.08,.81,.87,.71);
+  }
+
+  #span1 {
+    transform-origin: 0.9vw 0px;
+  }
+
+  #span3 {
+    transform-origin: bottom right;
+  }
+
+  #menuToggle input:checked ~ #span1 {
+    background-color: rgb(12, 182, 152);
+    transform: rotate(45deg) translate(9px);
+  }
+
+  #menuToggle input:checked ~ #span2 {
+    background-color: rgb(12, 182, 152);
+    transform: rotate(495deg) translate(3px);
+  }
+  #menuToggle input:checked ~ #span3 {
+    background-color: rgb(12, 182, 152);
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  #menuToggle input:checked + nav .main-menu {
+    display: block;
+  }
+
+
+  .sec-text h1 {
+    font-size: 4vh;
+  }
+
+  .heading {
+    padding: 0 0 1em 0;
+  }
+
+
+  .aboutDocumets h2, .aboutVizaText h2, .aboutBaggage h2, .text h2 {
+    font-size: 3vw;
+  }
+
+  .aboutVizaText {
+    margin-bottom: 0;
+  }
+
+  .secRight-textTitle {
+    margin-left: 34vw;
+  }
+
+  .sec-text {
+    padding-left: 10%;
+    padding-right: 4%;
+  }
+
+  .aboutSite {
+    padding-left: 15vw;
+    padding-top: 1.5vw;
+    padding-bottom: 0.3vw;
+    font-size: 4vw;
+  }
+
+  section {
+    height: 70vw;
+  }
+
+  section.sec3 {
+    background-position: -300px;
+  }
+
+  section.sec4 {
+    background-position: -150px;
+  }
+
+  .secLeft-textTitle {
+    font-size: 4vw;
+    margin-top: -8vw;
+    padding-left: 4vw;
+  }
+
+  .secRight-textTitle {
+    font-size: 4vw;
+    margin-left: 24vw;
+    margin-top: -8vw;
+    padding-left: 0;
+  }
+
+  .num01, .num03, .num02, .num04 {
+    font-size: 10vw;
+  }
+
+  .num02, .num04 {
+    margin-left: 55vw;
+  }
+
+  .num01, .num03 {
+    padding-left: 4.5vw;
+  }
+
+  .socialIcons {
+    padding: 0 0 0 8vw;
+    width: 60vw;
+  }
+
+  .socialIcons li a {
+    width: 10%;
+    font-size: 1.5rem;
+  }
+
+  .socialIcons li {
+    width: 4vw;
+    height: 4vh;
+  }
+
+  .info {
+    height:30vw;
+  }
+
+  footer, .footerContainer {
+    height: 32vw;
+    font-size: 2.2vw;
+  }
+
+  .network {
+    margin-top: 4vw;
+    width: 58vw;
+    height: 80%;
+  }
+
+  .network-text {
+    display: none;
+  }
+
+  .points {
+    height: 30%;
+  }
+
+  .point {
+    height: 4vw;
+  }
+
+  .points .logo1 {
+    display: none;
+  }
+
+  .points .logo1 img {
+    width: 30%;
+  }
+
+  .point:hover, .pointNumber:hover {
+    margin-top: 0.2vw;
+    margin-left: 2vw;
+    font-size: 2vw;
+  }
+
+  .pointsName {
+    margin-top: -3vw;
+    margin-top: 4vw;
+  }
+
+  .arrow img {
+    width: 70%;
+  }
+
+  .logo2 img {
+    margin-left: 5vw;
+    width: 70%;
+  }
+
+  .awards {
+    height: 120px;
+  }
+
+  #menuToggle span{
+    width: 10vw;
+    height: 0.6vw;
+  }
+
+  #span1 {
+    transform-origin: 2vw 0px;
+  }
+
+  #menuToggle input {
+    width: 40px;
+    height: 40px;
+  }
+
+  .infoBag {
+    background: none;
+  }
+
+  .infoBag p, .aboutViza p, .decorBlock2 p, .pasport p, .infoForUser p, .aboutHotels p {
+    font-size: 2.2vh;
+    margin-bottom: 5vw;
+  }
+
+  .infoForUser {
+    margin-right: 3vw;
+  }
+
+  .pasport .tourist, .aboutBag .tourist {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .aboutDocumets, .infoBag {
+    margin: 5vw;
+  }
+
+  .infoBag p:last-child {
+    margin-left: 0;
+  }
+
+  .blockEndInfo p {
+    font-size: 1.9vw;
+    margin-bottom: 0;
+  }
+
+  .blockEndInfo {
+    padding-bottom: 4vw;
+  }
+
+  .review:hover {
+    font-size: 2vw;
+  }
+
+  .aboutBaggage {
+    height: 2vw;
+  }
+
+  .infoForUser h1 {
+    margin-top: 9vw;
+    text-align: center;
+    font-size: 5vw;
+  }
+
+  .pasport, .baggage, .aboutViza, .aboutBag, .aboutHotels, .aboutViza .tourist {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+  }
+
+  .aboutViza .tourist img {
+    display: none;
+  }
+
+  .aboutViza .tourist {
+    margin-top: 0;
+    margin-bottom: 10vw;
+  }
+
+  .aboutVizaText {
+    margin-right: 5.5vw;
+  }
+
+  .infoBag {
+    margin-left: 9.5vw;
+  }
+
+  .aboutDocumets p {
+    margin-left: 5vw;
+    margin-right: 1.5vw;
+  }
+
+  .aboutBaggage h2 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .aboutHotelsText {
+    margin-top: 10vw;
+    margin-bottom: 0;
+  }
+
+  .aboutHotels .tourist {
+    width: 40%;
+    margin-top: 0;
+    margin-left: 20vw;
+    margin-bottom: 10vw;
+  }
+
+  .bag, .aboutBag .tourist, .airplaneFly {
+    display: none;
+  }
+
+  .baggage {
+    background: url('../img/plane-in-sky.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .blockEndInfo {
+    border-radius: 5px;
+  }
+
+  .modal-dialog {
+    margin: 25vw auto;
+  }
+
+  .modal-content {
+    width: 80vw;
+    height: 140vw;
+    font-size: 3vw;
+  }
+
+  #regForm {
+    width: 70vw;
+    height: 108vw;
+    padding-top: 4vw;
+  }
+
+  #userText {
+    width: 100%;
+  }
+
+  #button {
+    width: 100%;
+    height: 8vw;
+    font-size: 1.3em;
+  }
+
+  #colorInfo {
+    font-size: 2.5vw;
+  }
+
+  #contact, #userName {
+    width: 70vw;
+    margin: 0;
+  }
+
+  #userPhone, #mail {
+    width: 30vw;
+  }
+
+  #userPhone {
+    margin-left: 0;
+  }
+
+  #mail {
+    margin-right: 0;
+  }
+
+  .close {
+    font-size: 6vw;
+  }
+
+  #contact div {
+    margin: 0 2vw;
+  }
+
+  .ui-accordion .ui-accordion-header {
+    width: 75vw;
+  }
+
+  .contImg {
+    width: 30vw;
+    height: 20vw;
+  }
+
+  .contText {
+    width: 45vw;
+    font-size: 2vh;
+  }
+
+  .ui-accordion .ui-accordion-content {
+    width: 100%;
+    font-size: 2.1vh;
+    height: 60vh;
+  }
+
+  .port-plane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-range, .port-map p {
+    font-size: 1.9vh;
+  }
+
+  .number-range {
+    font-size: 2.2vh;
+  }
+
+  .info-range {
+    margin: 1.2vh 0;
+  }
+
+  .flyMap {
+    width: 90vw;
+    height: 60vw;
+    margin: 4vw 5vw 6vw 5vw;
+}
+
+.weather, .aboutCoordinates {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutWeather {
+  margin-top: 12vw;
+  margin-left: 4.5vw;
+  width: 83%;
+  margin: 0 auto;
+  padding-top: 15vw;
+}
+
+.aboutWeather::before {
+  background-size: contain;
+  width: 83%;
+  margin-left: 8vw;
+  height: 45vw;
+}
+
+.aboutCoordinates .tourist {
+  margin: 0 auto;
+  margin-top: 25vw;
+}
+
+.infoCoordinates {
+  margin-top: 1vw;
+}
+
+.weather p, .infoCoordinates .sec-textContainer {
+  font-size: 2.2vh;
+}
+
+#weatherCity, #weatherHourly {
+  height: 20vw;
+}
+
+.blockEndInfo2 p:first-child {
+  font-size: 2vw;
+}
+
+.blockEndInfo2 {
+  height: auto;
+}
+
+.blockEndInfo2 .review, .blockEndInfo .review {
+  font-size: 1.8vw;
+}
+
+.blockEndInfo2 .review a {
+  color: white;
+}
+
+.blockEndInfo .review a {
+  color: black;
+}
+
+.review:hover {
+  font-size: 2vw;
+  height: 2.1vw;
+}
+
+.blockEndInfo2 .review a:hover, .blockEndInfo .review a:hover {
+  color: rgb(99, 227, 215);
+}
+
+.aboutMap h2, .aboutWeather h2, .aboutDocumets h2, .aboutVizaText h2, .aboutBaggage h2, .text h2 {
+  font-size: 5vw;
+}
+
+#blockText h4 {
+    width: 100%;
+    margin-left: 1vw;
+    padding-left: 10vw;
+}
+
+.newUserNick {
+  width: 100%;
+}
+
+#newReview {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+#buttonReview {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  font-size: 2.4vw;
+}
+
+}
